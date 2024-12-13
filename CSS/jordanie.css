@@ -1,0 +1,497 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #3d2c28; 
+    background-color: #fdf7f0; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.sticker {
+    position: fixed;
+    bottom: 20px;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.sticker img {
+    width: 100px;
+}
+
+.sticker.left {
+    left: 10px;
+}
+
+.sticker.right {
+    right: 10px;
+}
+
+nav {
+    background-color: #a45a32; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative;
+    top: 0;
+    z-index: 100;
+}
+
+nav .logo a {
+    color: #ffffff; 
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav .nav-links li {
+    position: relative;
+}
+
+nav .nav-links a {
+    color: #f4ebe5; 
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #ffd9a5; 
+    transform: scale(1.1);
+}
+
+nav .nav-icons button {
+    background: none;
+    border: 1px solid #fff;
+    font-size: 1.5rem;
+    padding: 8px 15px;
+    margin-left: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav .nav-icons button:hover {
+    background-color: #f57c00;
+    color: white;
+}
+
+h1, h2, h3 {
+    color: #b36b49;
+}
+
+button {
+    background-color: #d9603b; /* Rouge/orange cohérent */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+button:hover {
+    background-color: #c14f2c; /* Couleur plus sombre au hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Réduit légèrement le bouton */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+a:hover {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+body.daltonien-mode {
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+
+body.daltonien-mode h1,
+body.daltonien-mode h2,
+body.daltonien-mode h3 {
+    color: #005b96;
+}
+
+body.daltonien-mode button {
+    background-color: #ffd700;
+    color: #333333;
+}
+
+body.daltonien-mode button:hover {
+    background-color: #ffd500;
+}
+
+body.dark-mode {
+    background-color: #121212; /* Fond sombre */
+    color: #e0e0e0; /* Couleur de texte par défaut plus claire */
+}
+
+.dark-mode nav {
+    background-color: #1f1f1f; /* Fond sombre de la navigation */
+    color: #e0e0e0; /* Texte clair dans la navigation */
+}
+
+.dark-mode nav a {
+    color: #e0e0e0; /* Liens clairs */
+}
+
+.dark-mode nav a:hover {
+    color: #61dafb; /* Lien bleu clair au survol */
+}
+
+.dark-mode section {
+    background-color: #1f1f1f; /* Fond sombre des sections */
+    color: #e0e0e0; /* Texte clair dans les sections */
+    padding: 20px;
+}
+
+.dark-mode section h2 {
+    color: #61dafb; /* Couleur bleue pour les titres */
+}
+
+/* Paragraphes et listes */
+.dark-mode section p, 
+.dark-mode section li {
+    color: #c1c1c1; /* Texte des paragraphes plus clair */
+}
+
+body.dark-mode p {
+    color: #d0d0d0; /* Gris clair pour le texte */
+}
+
+/* Liens */
+body.dark-mode a {
+    color: #4fc3f7; /* Bleu cyan */
+}
+
+body.dark-mode a:hover {
+    color: #29b6f6; /* Bleu plus foncé */
+}
+
+.dark-mode button {
+    background-color: #286678; /* Fond bleu clair pour les boutons */
+    color: #ffffff; /* Texte des boutons blanc */
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.dark-mode button:hover {
+    background-color: #4fa3d1; /* Fond bleu légèrement plus foncé au survol */
+}
+
+.dark-mode #access {
+    background-color: #121212;
+}
+
+.dark-mode #ideal-seasons {
+    background-color: #121212;
+}
+
+.dark-mode #night {
+    background-color: #121212;
+}
+
+.dark-mode #night video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.dark-mode footer {
+    background-color: #1f1f1f; /* Fond sombre pour le footer */
+    color: #e0e0e0; /* Texte clair pour le footer */
+    text-align: center;
+    padding: 10px;
+}
+
+.dark-mode footer a {
+    color: #61dafb; /* Lien bleu clair dans le footer */
+}
+
+.dark-mode footer a:hover {
+    color: #ffffff; /* Lien devient blanc au survol */
+}
+
+.dark-mode .cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+}
+
+.dark-mode .card {
+    color: #e0e0e0; /* Texte clair pour les cartes */
+    padding: 10px;
+    border-radius: 8px;
+    width: 30%;
+}
+
+.dark-mode .cards .card {
+    background-color: #121212;
+}
+
+.dark-mode .card h3 {
+    color: #61dafb; /* Titre des cartes bleu clair */
+}
+
+.dark-mode .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+body.dark-mode .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Ombre plus intense */
+}
+
+/* Sections spécifiques */
+body.dark-mode .restaurants {
+    background-color: #1e1e1e; /* Fond des sections restaurant */
+    border-color: #292929; /* Bordure des sections restaurant */
+    color: #d1d1d1; /* Texte principal */
+}
+
+body.dark-mode .restaurants ul li {
+    background-color: #1f1f1f; /* Fond des items de liste */
+    color: #d1d1d1; /* Texte principal */
+    border: 1px solid #292929; /* Bordure des items */
+}
+
+header.hero {
+    background: url(../IMAGES/petra.jpg) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 0;
+    color: #fde4d0; /* Beige clair pour contraste doux */
+}
+
+.hero-content p {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff4e6; /* Beige clair uniforme */
+}
+
+#access {
+    background-color: #f9efe2; /* Variation légère pour section */
+    padding: 40px 20px;
+}
+
+#access h2 {
+    font-size: 2rem;
+    color: #8b4a3d; /* Brun sombre pour contraste */
+}
+
+#access ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#access li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+#ideal-seasons {
+    background-color: #f1f1f1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#ideal-seasons h2 {
+    font-size: 2rem;
+    color: #d9c49b;
+}
+
+#ideal-seasons ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#ideal-seasons li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+}
+
+.cards .card {
+    background: #fffdf9; /* Fond très clair naturel */
+    border: 1px solid #d7c4b1; /* Bordure douce */
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.card p {
+    padding: 0 15px 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+#night {
+    margin: 50px auto;
+    max-width: 900px;
+    text-align: center;
+    background-color: #f9f3e9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #d2a679;
+}
+
+#night h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #a55a2a;
+    margin-bottom: 20px;
+}
+
+.petra-video {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    border: 2px solid #d2a679;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.petra-video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#pricing ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#pricing li {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.restaurants {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f3e9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #d2a679;
+}
+
+.restaurants h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #a55a2a;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.restaurants p {
+    font-size: 1rem;
+    color: #6b4f3b;
+    line-height: 1.6;
+}
+
+.restaurants ul {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.restaurants ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d2a679;
+}
+
+.restaurants ul li:hover {
+    background-color: #e8d3c4;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+footer {
+    background-color: #a45a32; /* Reprise de la barre de navigation */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #ffd9a5; /* Lien accent sable */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
