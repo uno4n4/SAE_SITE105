@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/76ad15112d.js" crossorigin="anonymous"></script>
+    <link href="../CSS/jordanie.css" rel="stylesheet">
+    <script src="../JS/script.js" defer></script>
+    <link rel="icon" type="image/jpg" href="../IMAGES/icone.ico">
+    <title>Découverte de Pétra</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="#">Voyasia</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="montfuji.html">Japon : Mont Fuji</a></li>
+            <li><a href="thailande.html">Thailande : Koh Phi Phi</a></li>
+            <li><a href="savoirplus.html">En Savoir Plus</a></li>
+        </ul>
+    </nav>
+
+    <div class="nav-icons">
+        <button id="toggleDaltonienMode">Mode Daltonien</button>
+        <button id="zoomIn">Zoom + </button>
+        <button id="zoomOut">Zoom -</button>
+        <button id="toggleDarkMode">Mode sombre</button>
+    </div>
+
+    <div class="sticker left">
+        <img src="../IMAGES/palmier.webp" alt="palmier1">
+    </div>
+    <div class="sticker right">
+        <img src="../IMAGES/palmier.webp" alt="palmier2">
+    </div>
+
+    <header class="hero">
+        <div class="hero-content">
+        <h1>Pétra, la cité Rose</h1>
+        <p>Une des sept merveilles du monde, nichée au coeur de la Jordanie.</p>
+        <button id="learnMore">En savoir plus</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>A propos de Pétra</h2>
+            <p>Pétra est une ancienne cité Nabatéenne, située au sud-ouest de la Jordanie, inscrite au patrimoine Mondial de l'UNESCO. Ses monuments sont taillés dans la roche il y a plus de 2 000 ans.</p>
+        </section>
+
+        <section id="access">
+            <h2>Accès à Pétra</h2>
+            <p>Pétra est à environ 240km au sud d'Amman, la capitale. Voici les principaux moyens d'accès :</p>
+            <ul>
+                <li><i class="fa-solid fa-plane"></i> Par avion : L'aéroport international Queen Alia (Amman) est le principal aéroport international. Il est à environ 3 heures en voiture de Pétra.</li>
+                <li><i class="fa-solid fa-bus"></i> Par bus : Il existe des bus réguliers qui relient Amman à Pétra. Le trajet dure environ 3 heures.</li>
+                <li><i class="fa-solid fa-car"></i> Par voiture : Louez une voiture pour explorez Pétra à votre propre rythme. Il y a des parkings disponibles près du site.</li>
+            </ul>
+        </section>
+
+        <section id="ideal-seasons">
+            <h2><i class="fa-regular fa-sun"></i> Saisons idéales pour visiter Pétra <i class="fa-regular fa-sun"></i></h2>
+            <p>Le climat à Pétra est typiquement désertique. Voici les meilleures périodes pour y voyager :</p>
+            <ul>
+                <li>Printemps (mars à mai) : Le climat est doux et agréable, avec des températures idéales pour explorer les monuments.</li>
+                <li>Automne (septembre à novembre) : C'est la période la plus agréable, avec des températures modérées et moins de touristes.</li>
+                <li>Hiver (décembre à février) : Bien que plus froid, l'hiver est moins fréquenté, ce qui permet de visiter Pétra en toute tranquillité.</li>
+            </ul>
+            <p>Evitez l'été (juin à août), car les températures peuvent dépasser les 40°C, rendant les visites difficiles.</p>
+        </section>
+
+        <section id="hightlights">
+            <h2>Lieux emblématiques <i class="fa-solid fa-location-dot"></i></h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="../IMAGES/siq.jpg" alt="Le Siq">
+                    <h3>Le Siq</h3>
+                    <p>Canyon étroit de 200 mètres de haut menant au Khazneh (le Trésor), célèbre monument sculpté dans la roche.</p>
+                </div>
+                <div class="card">
+                    <img src="../IMAGES/khazneh.jpg" alt="Le Khazneh">
+                    <h3>Le Trésor</h3>
+                    <p>Monument le plus emblématique de Pétra.</p>
+                </div>
+                <div class="card">
+                    <img src="../IMAGES/addeir.jpg" alt="Le Monastère">
+                    <h3>Le Monastère</h3>
+                    <p>Plus grand que le Trésor, offrant une vue spectaculaire.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="night">
+            <h2>Pétra de nuit :</h2>
+                <video autoplay muted loop class="petra-video">
+                    <source src="../VIDEO/Petra Night Show   YouTube.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+            <p>Découvrez la magie de Pétra illuminée à la bougie lors d'un spectacle unique.</p>
+        </section>
+
+        <section id="pricing">
+            <h2>Tarifs et Réservations <i class="fa-solid fa-money-check-dollar"></i></h2>
+            <ul>
+                <li>1 jour : 65 €</li>
+                <li>2 jours : 70 €</li>
+                <li>3 jours : 77 €</li>
+                <li>Sans nuit en Jordanie : 115 €</li>
+            </ul>
+            <p>Gratuit pour les moins de 12 ans.</p>
+            <button id="reserve">Réservez maintenant</button>
+        </section>
+
+        <section class="restaurants">
+            <h2>Où manger à Pétra ? <i class="fa-solid fa-utensils"></i></h2>
+            <p>Voici quelques restaurants à découvrir lors de votre voyage : </p>
+            <ul>
+                <li>Basin Restaurant : Buffet à 22 €.</li>
+                <li>Nabataen Tent Restaurant : Buffet abordable à 13 €.</li>
+                <li>Three Steps (Wadi Musa) : Repas copieux à prix corrects.</li>
+            </ul>
+        </section>
+
+        <section id="quiz">
+            <h2>Testez vos connaissances</h2>
+            <p>Quel est le monument le plus célèbre de Pétra ?</p>
+            <button class="quiz-option" data-answer="true">Le Khazneh</button>
+            <button class="quiz-option" data-answer="false">Le Colisée</button>
+            <button class="quiz-option" data-answer="false">Le Pont de Pétra</button>
+            <p id="quiz-feedback"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 découverte de Pétra. Tous droits réservés. <a href="mailto:voyasia@hotmail.com">Contactez-nous</a></p>
+    </footer>
+
+</body>
+</html>
