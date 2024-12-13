@@ -1,0 +1,380 @@
+body {
+  margin: 0; /* Supprime les marges par défaut du corps de la page */
+  padding: 0; /* Supprime les paddings par défaut du corps de la page */
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 0.05em;
+  text-align: center;
+  background-image: url(../IMAGES/japon_1.webp);
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* Permet à la section principale d'occuper tout l'espace disponible */
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  color: white;
+  text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;
+}
+
+h2 {
+  font-size: 40px;
+  color: white;
+  text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;
+}
+
+img {
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff, 0 0 30px #ffffff;
+  transition: transform 0.3s ease-in-out; /* Ajout de la transition pour l'effet de grossissement */
+}
+
+img:hover {
+  transform: scale(1.02); /* Grossissement de l'image */
+}
+
+button {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transform: scale(1); /* Ajout de la transition pour l'effet de grossissement */
+}
+
+button:hover {
+  transform: scale(1.02); /* Grossissement du bouton */
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: white; /* Assure que le fond reste blanc */
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 15px;
+  z-index: -1;
+  background: linear-gradient(to right, black, gray, black);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+button:hover::after {
+  opacity: 0; /* Empêche le noircissement */
+}
+
+.button-link {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button-link:hover {
+  transform: scale(1.02); /* Grossissement du bouton */
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: white; /* Assure que le fond reste blanc */
+}
+
+.button-link::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 15px;
+  z-index: -1;
+  background: linear-gradient(to right, black, gray, black);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.button-link:hover::after {
+  opacity: 0; /* Empêche le noircissement */
+}
+
+.tableau-arrondi {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+  border-radius: 15px; /* Ajout de border-radius pour arrondir les coins */
+  overflow: hidden; /* Assure que le contenu ne dépasse pas les coins arrondis */
+  border: 2px solid black; /* Ajout d'une bordure plus visible */
+}
+
+.tableau-arrondi th, .tableau-arrondi td {
+  border: 2px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+.tableau-arrondi th {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tableau-arrondi td {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.fond-flou {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.narrow-section {
+  max-width: 1150px; /* Ajustez cette valeur pour définir la largeur souhaitée */
+  margin: 0 auto;
+  margin-bottom: 40px; /* Ajoute un écart entre les sections */
+}
+
+.texte-centre {
+  text-align: center;
+  line-height: 1.6;
+}
+
+.conteneur-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.conteneur-image p {
+  max-width: 100%;
+  text-align: left;
+}
+
+.video-link {
+  position: relative;
+  display: inline-block;
+}
+
+.video-link .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background: url('../IMAGES/youtube.webp') no-repeat center center;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.video-link:hover .play-icon {
+  opacity: 1;
+}
+
+.bas {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%; /* Assure que le pied de page prend toute la largeur */
+  box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+  position: relative;
+  min-height: 100px; /* Ajoute une hauteur minimale pour s'assurer que le pied de page occupe suffisamment d'espace */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Ajoute un padding pour éviter que le contenu ne touche les bords */
+}
+
+.footer-logo-link {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 150px;
+  text-decoration: none;
+}
+
+.footer-logo-link img {
+  width: 120%;
+  height: auto;
+  border-radius: 0; /* Désactive le border-radius */
+  box-shadow: none; /* Désactive le box-shadow */
+  transition: none; /* Désactive les effets de transition */
+}
+
+.footer-logo-link img:hover {
+  transform: none; /* Désactive le grossissement */
+}
+
+.footer-text {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icon-link {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icon-link img {
+  width: 30px;
+  height: 30px;
+  border-radius: 0; /* Désactive le border-radius */
+  box-shadow: none; /* Désactive le box-shadow */
+  transition: none; /* Désactive les effets de transition */
+}
+
+.social-icon-link img:hover {
+  transform: none; /* Désactive le grossissement */
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #ddd;
+}
+/* Styles pour le mode sombre */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+  background-image: none; /* Désactive l'image de fond */
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+  color: #ffffff;
+  text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000;
+}
+
+body.dark-mode .fond-flou {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+body.dark-mode .tableau-arrondi th {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .tableau-arrondi td {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .footer-text, body.dark-mode .footer-link {
+  color: #ffffff;
+}
+
+body.dark-mode .footer-link:hover {
+  color: #ddd;
+}
+
+body.dark-mode .button-link, body.dark-mode button {
+  background-color: #333333;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+body.dark-mode .button-link:hover, body.dark-mode button:hover {
+  background-color: #444444;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Styles pour le mode daltonien */
+body.daltonien-mode {
+  background-color: #ffffff;
+  color: #000000;
+  background-image: none; /* Désactive l'image de fond */
+}
+
+body.daltonien-mode h1, body.daltonien-mode h2 {
+  color: #000000;
+  text-shadow: none;
+}
+
+body.daltonien-mode .fond-flou {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+body.daltonien-mode .tableau-arrondi th {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.daltonien-mode .tableau-arrondi td {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.daltonien-mode .footer-text, body.daltonien-mode .footer-link {
+  color: #000000;
+}
+
+body.daltonien-mode .footer-link:hover {
+  color: #555555;
+}
+
+body.daltonien-mode .button-link, body.daltonien-mode button {
+  background-color: #cccccc;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+body.daltonien-mode .button-link:hover, body.daltonien-mode button:hover {
+  background-color: #bbbbbb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
