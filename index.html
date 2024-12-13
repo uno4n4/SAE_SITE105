@@ -11,7 +11,7 @@
 
     <header>
         <h1>Les 3 meilleurs sites touristiques en 2024</h1>
-        <nav class="side nav">
+        <nav class="side-nav">
             <ul>
                 <li><a href="./HTML/jordanie.html">Jordanie</a></li>
                 <li><a href="./HTML/montfuji.html">Mont Fuji</a></li>
@@ -39,10 +39,12 @@
         <section class="map">
             <h2>Explorez l'Asie</h2>
             <p>Prêt(e) à découvrir les merveilles du monde ? <br> Cliquez sur l'une des destinations pour commencer votre voyage virtuel et planifiez votre prochaine aventure dès aujourd'hui !</p>
+            <div class="map-container">
             <img src="./IMAGES/earth.jpg" alt="Carte de la Terre centrée sur l'Asie">
                 <div class="marker" id="marker-jordanie" data-country="jordanie"></div>
                 <div class="marker" id="marker-japon" data-country="japon"></div>
                 <div class="marker" id="marker-thailande" data-country="thailande"></div>
+            </div>
         </section>
 
         <div id="country-info">
@@ -56,21 +58,31 @@
                 Préparez vos bagages et embarquez pour un voyage inoubliable.</p>
         </section>
 
-        <section>
+        <section class="travel-tips">
             <h2>A savoir avant de voyager</h2>
-            <i class="fa-solid fa-passport"></i>
-            <h4>Passeport</h4>
-            <p>Préparez votre passeport avant de voyager. Et vérifiez votre éligibilité au visa pour chaque pays.</p>
-            <i class="fa-solid fa-plane-departure"></i>
-            <h4>S'y rendre</h4>
-            <p>Vous préparez un voyage en Jordanie ? Au Japon ? En Thaïlande ? <br>
-                Découvrez comment s'y rendre.</p>
-                <i class="fa-solid fa-map-location-dot"></i>
-            <h4>Conseils de voyage</h4>
-            <p>Profitez de notre visite grâce à notre guide de voyage pratique.</p>
-            <i class="fa-solid fa-mountain-city"></i>
-            <h4>Se déplacer</h4>
-            <p>Passant d'un bateau traditionnel au métro, voici comment explorer les 3 meilleurs sites touristiques de l'Asie</p>
+            <div class="tips-grid">
+                <div class="tip">
+                    <i class="fa-solid fa-passport"></i>
+                    <h4>Passeport</h4>
+                    <p>Préparez votre passeport avant de voyager. Et vérifiez votre éligibilité au visa pour chaque pays.</p>
+                </div>
+                <div class="tip">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <h4>S'y rendre</h4>
+                    <p>Vous préparez un voyage en Jordanie ? Au Japon ? En Thaïlande ? <br>
+                        Découvrez comment s'y rendre.</p>
+                </div>
+                <div class="tip">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h4>Conseils de voyage</h4>
+                    <p>Profitez de notre visite grâce à notre guide de voyage pratique.</p>
+                </div>
+                <div class="tip">
+                    <i class="fa-solid fa-mountain-city"></i>
+                    <h4>Se déplacer</h4>
+                    <p>Passant d'un bateau traditionnel au métro, voici comment explorer les 3 meilleurs sites touristiques de l'Asie</p>
+                </div>
+            </div>
         </section>
     </main>
 
