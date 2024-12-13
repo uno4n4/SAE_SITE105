@@ -1,0 +1,272 @@
+body{
+    color:#000000;
+    background-color: whitesmoke;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+.clr{
+    clear: both;
+}
+
+a{
+    color:white;
+}
+
+#showcase{
+	background:url('../IMAGES/koh_phi_phi.webp');
+    display:flex;
+    justify-content: center;
+    align-items:center;
+	text-align: center;
+    color:white;
+    margin:0;
+    padding:0 20px;
+}
+
+header{
+    margin:auto;
+    border-radius: 20px;
+    border: solid 2px white;
+    background-color: #1f232055;
+    width: 87%;
+    height: 95%;
+}
+
+header h1{
+	font-size:55px;
+    font-family:fantasy;
+    color:aquamarine;
+	line-height:1.6em;
+	padding-top:14%;
+    margin-bottom: 13.5%;
+}
+
+header p{
+    width:70%;
+    margin:0 15% 30px 15%;
+    text-align:left;
+    color:#fff;
+}
+
+#logo-site{
+    height:40px;
+    float:left;
+    margin-left: 10px;
+}
+
+#nav-icons{
+    margin-top:2%;
+}
+
+header #nav-icons button{
+    border-radius: 15px;
+} /*probleme ici c'etait une faute*/
+
+button{
+    background-color:aquamarine;
+    border-radius: 15px;
+    border:none;
+    cursor:pointer;
+    padding:10px 20px;
+    font-size:1rem;
+}
+
+nav{
+    float: right;
+}
+
+nav li{
+    list-style-type:none;
+    font-size: 18px;
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#fff
+}
+
+nav a:active{
+    color:yellow;
+}
+
+.titre{
+    color: rgb(13, 137, 95);
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.separateur{
+    padding:15px;
+    margin-bottom:30px;
+    background-color: #7dafa2a8;
+}
+.centre{
+    text-align: center;
+    margin:70px auto;
+    width:50%;
+}
+
+#don{
+    background-image: url('../IMAGES/phi-don.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#leh{
+    background-image: url('../IMAGES/phi-leh.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.iles{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.iles strong{
+    font-size: 50px;
+    font-family: fantasy;
+    color:rgb(13, 137, 95);
+}
+
+#don p{
+    background-color: #0b00006d;
+}
+
+#leh p:last-child{
+    background-color: #2b04043e;
+}
+
+.iles div{
+    width: 40%;
+    line-height: 1.3em;
+    text-align: center;
+    color:#fff;
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin-top:40px;
+    margin-bottom:40px;
+    box-shadow:2px 2px 2px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+table{
+    margin-top: 30px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, th{
+    border: solid rgb(59, 59, 59) 1px;
+}
+
+.price1{
+    background-color:rgb(28, 108, 81);
+    border-radius: 15px;
+    width:70%;
+    padding:2px;
+    margin:20px auto;
+}
+
+.price2{
+    background-color:rgb(207, 238, 228);
+    border-radius: 15px;
+    width:50%;
+    padding:4px;
+    margin:7px auto;
+}
+
+.activity{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom:5%;
+}
+
+.activity ul{
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow:2px 2px 2px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    line-height:1.6em;
+    width: 20%;
+    text-align: center;
+    float:left;
+    list-style-type:none;
+}
+
+.activity li:first-child{
+    font-family: fantasy;
+    color:rgb(13, 137, 95);
+    font-size:20px;
+}
+
+.activity img{
+    width: 100%;
+    margin-top:10px;
+}
+
+#info{
+    width:7%;
+    margin:7%;
+    float: left;
+}
+
+.tips{
+    margin-left:4%;
+    width:30%;
+    float:left;
+}
+
+#film img{
+    width: 40%;
+    float:left;
+    padding:5%;
+    border-radius: 15px;
+}
+
+#film{
+    width: 55%;
+    float:right;
+    padding:3%;
+    border-radius: 15px;
+    border: 7px dashed #014747;
+}
+
+footer .titre{
+    margin: 2.3em auto;
+    color:aquamarine;
+}
+
+.footer-r{
+    float:right;
+    background-color: black;
+    width:20%;
+}
+
+.footer-r p{
+    margin:2em 5%;
+}
+
+.footer-left{
+    width:30%;
+    margin-left:10%;
+}
+
+.footer-l{
+    float:left;
+    background-color: black;
+    width:20%;
+}
+
+.footer-l i{
+    margin:2em 2%;
+}
+
+footer{
+    color:#fff;
+    background-color: black;
+    height: 600px;
+}
