@@ -26,61 +26,182 @@ body {
     right: 10px;
 }
 
-nav {
-    background-color: #a45a32; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    position: relative;
-    top: 0;
-    z-index: 100;
+/* Style du bouton "Retour en haut" */
+#backToTop {
+    position: fixed;
+    bottom: 20px;  /* Positionné un peu au-dessus du bas */
+    right: 20px;   /* Positionné à droite */
+    z-index: 1000; /* Assure que le bouton est au-dessus du contenu */
+    font-size: 24px;  /* Taille du texte (flèche) */
+    background-color: #a45a32;  /* Couleur de fond */
+    color: white;  /* Couleur du texte */
+    border: none;
+    padding: 10px 15px;  /* Taille du bouton */
+    border-radius: 50%;  /* Forme circulaire */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Ombre douce */
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Transition au hover */
 }
 
-nav .logo a {
-    color: #ffffff; 
-    font-size: 1.8rem;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
+/* Style au survol */
+#backToTop:hover {
+    background-color: #d9603b;  /* Couleur de fond change au survol */
+    transform: scale(1.1);  /* Légère augmentation de la taille au survol */
 }
 
-nav .nav-links {
-    list-style-type: none;
-    display: flex;
-    gap: 30px;
+/* Style au clic */
+#backToTop:active {
+    transform: scale(0.98);  /* Réduction au clic */
 }
 
-nav .nav-links li {
-    position: relative;
+/* Texte au survol */
+#backToTop:focus {
+    outline: none;  /* Enlève le contour par défaut */
 }
 
-nav .nav-links a {
-    color: #f4ebe5; 
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease, transform 0.3s ease;
+/* Section météo */
+#weather {
+    background-color: #d9603b65;
+    padding: 5px; /* Réduction de l'espace intérieur */
+    border-radius: 5px; /* Angle légèrement arrondi */
+    width: 100px; /* Réduction de la largeur */
+    font-size: 12px; /* Réduction de la taille du texte */
+    position: absolute; /* Positionnement absolu */
+    top: 10px; /* Positionnement depuis le haut */
+    right: 10px; /* Positionnement depuis la droite */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* S'assurer que ça reste au-dessus des autres éléments */
 }
 
-nav .nav-links a:hover {
-    color: #ffd9a5; 
-    transform: scale(1.1);
+#weather h2 {
+    color: white;
+    font-size: 14px; /* Taille plus petite pour le titre */
+    margin-bottom: 5px; /* Moins d'espacement sous le titre */
 }
 
-nav .nav-icons button {
-    background: none;
-    border: 1px solid #fff;
-    font-size: 1.5rem;
-    padding: 8px 15px;
-    margin-left: 15px;
+#weather iframe {
+    width: 100px; /* Réduction de la largeur de l'iframe */
+    height: 50px; /* Réduction de la hauteur de l'iframe */
+    border: none; /* Suppression de la bordure par défaut */
+}
+
+#toggle-nav {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    font-size: 24px;
+    background-color: #a45a32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
 
-nav .nav-icons button:hover {
-    background-color: #f57c00;
+#toggle-nav:hover {
+    background-color: #d9603b;
+}
+
+#toggle-nav:active {
+    transform: scale(0.95);
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Caché initialement */
+    width: 250px;
+    height: 100%;
+    background-color: #a45a32cb; /* Fond semi-transparent */
     color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease; /* Animation pour le défilement */
+    z-index: 999;
+
+    visibility: hidden; /* Rendu invisible */
+    opacity: 0; /* Rendu totalement transparent */
+}
+
+/* Quand le menu est ouvert */
+.side-nav.open {
+    left: 0; /* Fait apparaître le menu */
+    visibility: visible; /* Rendu visible */
+    opacity: 1; /* Rendu opaque */
+    transition: left 0.3s ease, opacity 0.3s ease; /* Animation fluide */
+}
+
+#logo-clair {
+    display: block;
+}
+
+#logo-sombre {
+    display: none;
+}
+
+/* Logo du menu */
+.side-nav .logo {
+    display: flex; /* Permet un positionnement flexible */
+    justify-content: flex-end; /* Aligne le contenu (l'image) sur la droite */
+    margin-bottom: 20px; /* Espacement en dessous du logo */
+}
+
+.side-nav .logo img {
+    width: 100px; /* Ajuste la largeur de l'image */
+    height: auto; /* Conserve le ratio d'aspect */
+    border-radius: 5px; /* Ajoute des bords légèrement arrondis */
+    transition: transform 0.3s ease; /* Ajoute une animation au survol */
+}
+
+/* Effet au survol du logo */
+.side-nav .logo img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Ajoute une ombre douce */
+}
+
+.side-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.side-nav a:hover {
+    color: #343332; /* Couleur au survol */
+}
+
+/* Boutons dans le menu */
+.nav-icons {
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-icons button {
+    background-color: #d9603b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-icons button:hover {
+    background-color: #c14f2c;
+}
+
+.nav-icons button:active {
+    transform: scale(0.98);
 }
 
 h1, h2, h3 {
@@ -111,55 +232,189 @@ a:hover {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
+/*Mode sombre */
+
 body.dark-mode {
     background-color: #121212; /* Fond sombre */
     color: #e0e0e0; /* Couleur de texte par défaut plus claire */
 }
 
-.dark-mode nav {
-    background-color: #1f1f1f; /* Fond sombre de la navigation */
-    color: #e0e0e0; /* Texte clair dans la navigation */
+.dark-mode #backToTop {
+    position: fixed;
+    bottom: 20px;  /* Positionné un peu au-dessus du bas */
+    right: 20px;   /* Positionné à droite */
+    z-index: 1000; /* Assure que le bouton est au-dessus du contenu */
+    font-size: 24px;  /* Taille du texte (flèche) */
+    background-color: #286678; 
+    color: white;  /* Couleur du texte */
+    border: none;
+    padding: 10px 15px;  /* Taille du bouton */
+    border-radius: 50%;  /* Forme circulaire */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Ombre douce */
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Transition au hover */
 }
 
-.dark-mode nav a {
-    color: #e0e0e0; /* Liens clairs */
+/* Style au survol */
+.dark-mode #backToTop:hover {
+    background-color: #348ba4; 
+    transform: scale(1.1);  /* Légère augmentation de la taille au survol */
 }
 
-.dark-mode nav a:hover {
-    color: #61dafb; /* Lien bleu clair au survol */
+.dark-mode #toggle-nav {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    font-size: 24px;
+    background-color: #286678; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode #toggle-nav:hover {
+    background-color: #005b96;
+}
+
+.dark-mode #toggle-nav:active {
+    transform: scale(0.95);
+}
+
+.dark-mode .side-nav {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Caché initialement */
+    width: 250px;
+    height: 100%;
+    background-color: #000000cb; /* Fond semi-transparent */
+    color: #286678;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease; /* Animation pour le défilement */
+    z-index: 999;
+
+    visibility: hidden; /* Rendu invisible */
+    opacity: 0; /* Rendu totalement transparent */
+}
+
+/* Quand le menu est ouvert */
+.dark-mode .side-nav.open {
+    left: 0; /* Fait apparaître le menu */
+    visibility: visible; /* Rendu visible */
+    opacity: 1; /* Rendu opaque */
+    transition: left 0.3s ease, opacity 0.3s ease; /* Animation fluide */
+}
+
+.dark-mode #logo-clair {
+    display: none;
+}
+
+.dark-mode #logo-sombre {
+    display: block;
+}
+
+/* Logo du menu */
+.dark-mode .side-nav .logo {
+    display: flex; /* Permet un positionnement flexible */
+    justify-content: flex-end; /* Aligne le contenu (l'image) sur la droite */
+    margin-bottom: 20px; /* Espacement en dessous du logo */
+}
+
+.dark-mode .side-nav .logo img {
+    width: 100px; /* Ajuste la largeur de l'image */
+    height: auto; /* Conserve le ratio d'aspect */
+    border-radius: 5px; /* Ajoute des bords légèrement arrondis */
+    transition: transform 0.3s ease; /* Ajoute une animation au survol */
+}
+
+/* Effet au survol du logo */
+.dark-mode .side-nav .logo img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Ajoute une ombre douce */
+}
+
+.dark-mode .side-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .side-nav a:hover {
+    color: #286678; /* Couleur au survol */
+}
+
+.dark-mode .nav-icons button {
+    background-color: #1e1d1d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .nav-icons button:hover {
+    background-color: #000000;
+}
+
+.dark-mode .nav-icons button:active {
+    transform: scale(0.98);
+}
+
+/* Section météo */
+.dark-mode #weather {
+    background-color: #00000065;
+    padding: 5px; /* Réduction de l'espace intérieur */
+    border-radius: 5px; /* Angle légèrement arrondi */
+    width: 100px; /* Réduction de la largeur */
+    font-size: 12px; /* Réduction de la taille du texte */
+    position: absolute; /* Positionnement absolu */
+    top: 10px; /* Positionnement depuis le haut */
+    right: 10px; /* Positionnement depuis la droite */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* S'assurer que ça reste au-dessus des autres éléments */
+}
+
+.dark-mode #weather h2 {
+    color: #2d859e;
+    font-size: 14px; /* Taille plus petite pour le titre */
+    margin-bottom: 5px; /* Moins d'espacement sous le titre */
+}
+
+.dark-mode .hero-content h1,
+.dark-mode .hero-content p {
+    color: white;
 }
 
 .dark-mode section {
     background-color: #1f1f1f; /* Fond sombre des sections */
-    color: #e0e0e0; /* Texte clair dans les sections */
     padding: 20px;
 }
 
-.dark-mode section h2 {
-    color: #61dafb; /* Couleur bleue pour les titres */
+.dark-mode main h2 {
+    color: #2d859e; /* Couleur bleue pour les titres */
 }
 
-/* Paragraphes et listes */
-.dark-mode section p, 
-.dark-mode section li {
+/* Paragraphes*/
+.dark-mode section p {
     color: #c1c1c1; /* Texte des paragraphes plus clair */
 }
 
-body.dark-mode p {
-    color: #d0d0d0; /* Gris clair pour le texte */
-}
-
-/* Liens */
-body.dark-mode a {
-    color: #4fc3f7; /* Bleu cyan */
-}
-
-body.dark-mode a:hover {
-    color: #29b6f6; /* Bleu plus foncé */
-}
-
 .dark-mode button {
-    background-color: #286678; /* Fond bleu clair pour les boutons */
+    background-color: #286678; /* Fond bleu fonce pour les boutons */
     color: #ffffff; /* Texte des boutons blanc */
     padding: 10px;
     border-radius: 5px;
@@ -169,40 +424,31 @@ body.dark-mode a:hover {
 }
 
 .dark-mode button:hover {
-    background-color: #4fa3d1; /* Fond bleu légèrement plus foncé au survol */
+    background-color: #348ba4; /* Fond bleu légèrement plus foncé au survol */
 }
 
 .dark-mode #access {
     background-color: #121212;
 }
 
+.dark-mode #access h2 {
+    color: #2d859e;
+}
+
+.dark-mode #access li {
+    color: #c1c1c1;
+}
+
 .dark-mode #ideal-seasons {
     background-color: #121212;
 }
 
-.dark-mode #night {
-    background-color: #121212;
+.dark-mode #ideal-seasons h2{
+    color: #2d859e;
 }
 
-.dark-mode #night video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.dark-mode footer {
-    background-color: #1f1f1f; /* Fond sombre pour le footer */
-    color: #e0e0e0; /* Texte clair pour le footer */
-    text-align: center;
-    padding: 10px;
-}
-
-.dark-mode footer a {
-    color: #61dafb; /* Lien bleu clair dans le footer */
-}
-
-.dark-mode footer a:hover {
-    color: #ffffff; /* Lien devient blanc au survol */
+.dark-mode #ideal-seasons li {
+    color: #c1c1c1;
 }
 
 .dark-mode .cards {
@@ -233,23 +479,77 @@ body.dark-mode a:hover {
     border-radius: 8px;
 }
 
-body.dark-mode .card:hover {
+.dark-mode .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Ombre plus intense */
 }
 
+.dark-mode #night {
+    background-color: #121212;
+    border: 2px solid #c1c1c1;
+}
+
+.dark-mode #night h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2d859e;
+    margin-bottom: 20px;
+}
+
+.dark-mode #night video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.dark-mode .petra-video {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    border: 2px solid #2d859e;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
 /* Sections spécifiques */
-body.dark-mode .restaurants {
+.dark-mode .restaurants {
     background-color: #1e1e1e; /* Fond des sections restaurant */
     border-color: #292929; /* Bordure des sections restaurant */
     color: #d1d1d1; /* Texte principal */
 }
 
-body.dark-mode .restaurants ul li {
+.dark-mode .restaurants ul li {
     background-color: #1f1f1f; /* Fond des items de liste */
     color: #d1d1d1; /* Texte principal */
     border: 1px solid #292929; /* Bordure des items */
 }
+
+.dark-mode .restaurants ul li:hover {
+    background-color: #2d869e7a;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+.dark-mode footer {
+    background-color: #121212; /* Fond sombre pour le footer */
+    color: #e0e0e0; /* Texte clair pour le footer */
+    text-align: center;
+    padding: 10px;
+}
+
+.dark-mode footer a {
+    color: #61dafb; /* Lien bleu clair dans le footer */
+}
+
+.dark-mode footer a:hover {
+    color: #2d859e; /* Lien devient blanc au survol */
+    text-decoration: none;
+}
+
+
+/*Fin du css mode sombre */
 
 header.hero {
     background: url(../IMAGES/petra.jpg) no-repeat center center/cover;
@@ -261,7 +561,6 @@ header.hero {
     color: white;
     padding: 0 20px;
 }
-
 
 .hero-content h1 {
     font-size: 4rem;
@@ -395,6 +694,11 @@ section {
 .petra-video:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#pricing a {
+    text-decoration: none;
+    color: white;
 }
 
 #pricing ul {
