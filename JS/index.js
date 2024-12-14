@@ -39,15 +39,15 @@ toggleNavButton.addEventListener("click", () => {
 const countries = {
   jordanie: {
     image: './IMAGES/jordanie.png',
-    link: 'jordanie.html',
+    link: './HTML/jordanie.html',
   },
   japon: {
     image: './IMAGES/japon.png',
-    link: 'japon.html',
+    link: './HTML/montfuji.html',
   },
   thailande: {
     image: './IMAGES/thailande.png',
-    link: 'thailande.html',
+    link: './HTML/kohphiphi.html',
   },
 };
 
