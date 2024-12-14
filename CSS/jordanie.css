@@ -538,19 +538,21 @@ body.dark-mode {
     background-color: black;
 }
 
-.dark-mode .footer-section h4 {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #2d859e;
-    text-transform: uppercase;
-}
-
-.dark-mode .footer-section a {
+.dark-mode footer .titre {
+    margin: 20px auto;
     color: #2d859e;
 }
 
-.dark-mode .footer-section a:hover {
-    color: #0ac4f7f7;
+.dark-mode footer p {
+    color: #d1d1d1;
+}
+
+.dark-mode footer a {
+    color: #858282;
+}
+
+.dark-mode footer a:hover {
+    color: #d1d1d1;
 }
 
 
