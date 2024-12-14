@@ -93,38 +93,6 @@ button:hover {
     background-color: #00627b; /* Couleur plus sombre au hover */
 }
 
-body.daltonien-mode {
-    background-color: #362929;
-    color: #333333;
-}
-
-body.daltonien-mode h3 {
-    color: #005b96;
-}
-
-body.daltonien-mode button {
-    background-color: #ffd700;
-    color: #333333;
-}
-
-body.daltonien-mode button:hover {
-    background-color: #ffd500;
-}
-
-body.daltonien-mode .side-nav {
-    background-color: #000000;
-    color: #005b96;
-}
-
-.daltonien-mode .side-nav a.active {
-    color: #241e0e;
-    border-bottom: 2px solid #f5c242;
-}
-
-body.daltonien-mode .form-container {
-    background-color: #005b96;
-}
-
 body.dark-mode {
     background-color: #111111;
 }
