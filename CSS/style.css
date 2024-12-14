@@ -13,6 +13,8 @@ body h2 {
 
 body p {
   color: #807e7c;
+  margin: 0 20px; /* Ajout de marges latérales pour éviter que le texte colle aux bords */
+  line-height: 1.8; /* Amélioration de l'espacement entre les lignes */
 }
 
 header {
@@ -64,7 +66,6 @@ body.dark-mode h4 {
 .dark-mode header {
   background-color: #333333;
 }
-
 
 .dark-mode .side-nav {
   background-color: #000000c1;
