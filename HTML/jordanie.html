@@ -22,23 +22,24 @@
         </section>        
     </header>
 
-    <nav>
+    <button id="toggle-nav">☰</button>
+    <nav class="side-nav">
         <div class="logo">
-            <a href="#">Voyasia</a>
+            <img src="../IMAGES/voyasia_logo_noir_sans_fond.png" id="logo-clair" class="logo" alt="Logo Voyasia">
+            <img src="../IMAGES/voyasia_logo.webp" id="logo-sombre" class="logo" alt="Logo Voyasia sombre">
         </div>
         <ul class="nav-links">
             <li><a href="../index.html">Accueil</a></li>
             <li><a href="montfuji.html">Japon : Mont Fuji</a></li>
-            <li><a href="thailande.html">Thailande : Koh Phi Phi</a></li>
+            <li><a href="../HTML/kohphiphi.html">Thailande : Koh Phi Phi</a></li>
             <li><a href="savoirplus.html">En Savoir Plus</a></li>
         </ul>
+        <div class="nav-icons">
+            <button id="zoomIn">Zoom + </button>
+            <button id="zoomOut">Zoom -</button>
+            <button id="toggleDarkMode">Mode sombre</button>
+        </div>
     </nav>
-
-    <div class="nav-icons">
-        <button id="zoomIn">Zoom + </button>
-        <button id="zoomOut">Zoom -</button>
-        <button id="toggleDarkMode">Mode sombre</button>
-    </div>
 
     <div class="sticker left">
         <img src="../IMAGES/palmier.webp" alt="palmier1">
@@ -46,6 +47,8 @@
     <div class="sticker right">
         <img src="../IMAGES/palmier.webp" alt="palmier2">
     </div>
+
+    <button id="backToTop" title="Retour en haut">↑</button>
 
     <header class="hero">
         <div class="hero-content">
@@ -121,7 +124,7 @@
                 <li>Sans nuit en Jordanie : 115 €</li>
             </ul>
             <p>Gratuit pour les moins de 12 ans.</p>
-            <button id="reserve">Réservez maintenant</button>
+            <button id="reserve"><a href="https://petrapass.pdtra.gov.jo/Online/Index" target="_blank">Réservez maintenant</a></button>
         </section>
 
         <section class="restaurants">
@@ -147,6 +150,5 @@
     <footer>
         <p>&copy; 2024 découverte de Pétra. Tous droits réservés. <a href="mailto:voyasia@hotmail.com">Contactez-nous</a></p>
     </footer>
-
 </body>
 </html>
