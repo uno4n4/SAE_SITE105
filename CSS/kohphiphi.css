@@ -10,10 +10,6 @@ body{
     clear: both;
 }
 
-a{
-    color:white;
-}
-
 #showcase{
 	background:url('../IMAGES/koh_phi_phi.webp');
     display:flex;
@@ -235,38 +231,28 @@ table td, th{
     border: 7px dashed #014747;
 }
 
+footer {
+    margin-top: 10px;
+    background-color: rgb(6, 53, 37); /* Reprise de la barre de navigation */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
 footer .titre{
-    margin: 2.3em auto;
+    margin: 20px auto;
     color:aquamarine;
 }
 
-.footer-r{
-    float:right;
-    background-color: black;
-    width:20%;
+footer p {
+    margin: 0;
 }
 
-.footer-r p{
-    margin:2em 5%;
+footer a {
+    color: aquamarine; /* Lien accent plage */
+    text-decoration: none;
 }
 
-.footer-left{
-    width:30%;
-    margin-left:10%;
-}
-
-.footer-l{
-    float:left;
-    background-color: black;
-    width:20%;
-}
-
-.footer-l i{
-    margin:2em 2%;
-}
-
-footer{
-    color:#fff;
-    background-color: black;
-    height: 600px;
+footer a:hover {
+    text-decoration: underline;
 }
