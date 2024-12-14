@@ -1,3 +1,32 @@
+// Récupère le bouton
+const backToTopButton = document.getElementById("backToTop");
+
+// Affiche ou cache le bouton en fonction de la position de la page
+window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "block";  // Affiche le bouton après 200px de défilement
+    } else {
+        backToTopButton.style.display = "none";  // Cache le bouton si on est tout en haut
+    }
+};
+
+// Lorsque l'utilisateur clique sur le bouton, on remonte tout en haut
+backToTopButton.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"  // Défilement doux vers le haut
+    });
+});
+
+// Sélection des éléments
+const toggleNavButton = document.getElementById('toggle-nav');
+const sideNav = document.querySelector('.side-nav');
+
+// Fonction pour ouvrir/fermer le menu
+toggleNavButton.addEventListener('click', () => {
+    sideNav.classList.toggle('open'); // Ajoute/enlève la classe "open"
+});
+
 const zoomInBtn = document.getElementById('zoomIn');
 const zoomOutBtn = document.getElementById('zoomOut');
 let zoomLevel = 1;
