@@ -49,6 +49,8 @@ button:hover {
   background-color: rgb(48, 131, 146); /* Couleur plus sombre au hover */
 }
 
+/*Mode sombre */
+
 body.dark-mode {
   background-color: #111111;
 }
@@ -56,35 +58,61 @@ body.dark-mode {
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h4 {
-  color: #000000;
+  color: #c1c1c1;
 }
 
-body.dark-mode button {
-  color: #005b96;
-  background-color: #777777;
+.dark-mode header {
+  background-color: #333333;
 }
 
-body.dark-mode button:hover {
-  color: #005b96;
-  background-color: #777777;
-}
 
-body.dark-mode .side-nav {
-  background-color: #000000;
+.dark-mode .side-nav {
+  background-color: #000000c1;
   color: #005b96;
 }
 
-body.dark-mode .travel-tips {
-  background-color: #005b96;
-}
-
-body.dark-mode .tip {
+.dark-mode .tip {
   background-color: #111111;
 }
 
-body.dark-mode .tip i {
+.dark-mode .tip i {
   color: #005b96;
 }
+
+.dark-mode #logo-clair {
+  display: none;
+}
+
+.dark-mode #logo-sombre {
+  display: block;
+}
+
+/* Logo du menu */
+.dark-mode .side-nav .logo {
+  display: flex; /* Permet un positionnement flexible */
+  justify-content: flex-end; /* Aligne le contenu (l'image) sur la droite */
+  margin-bottom: 20px; /* Espacement en dessous du logo */
+}
+
+.dark-mode .side-nav .logo img {
+  width: 70px; /* Ajuste la largeur de l'image */
+  padding-right: 50px;
+  height: auto; /* Conserve le ratio d'aspect */
+  border-radius: 5px; /* Ajoute des bords légèrement arrondis */
+  transition: transform 0.3s ease; /* Ajoute une animation au survol */
+}
+
+/* Effet au survol du logo */
+.dark-mode .side-nav .logo img:hover {
+  transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Ajoute une ombre douce */
+}
+
+.dark-mode .travel-tips {
+  background-color: #111111;
+}
+
+/*Fin du mode sombre */
 
 #toggle-nav {
   position: fixed;
@@ -136,9 +164,60 @@ body.dark-mode .tip i {
   color: #74c3d7;
 }
 
+/* Boutons dans le menu */
+.nav-icons {
+  padding: 20px;
+  text-align: center;
+}
+
+.nav-icons button {
+  background-color: #00627b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-icons button:hover {
+  background-color: #2a7185;
+}
+
 /* Ajout d'une classe "open" pour animer l'ouverture */
 .side-nav.open {
   right: 0;
+}
+
+#logo-clair {
+  display: block;
+}
+
+#logo-sombre {
+  display: none;
+}
+
+/* Logo du menu */
+.side-nav .logo {
+  display: flex; /* Permet un positionnement flexible */
+  justify-content: flex-end; /* Aligne le contenu (l'image) sur la droite */
+  margin-bottom: 20px; /* Espacement en dessous du logo */
+}
+
+.side-nav .logo img {
+  width: 70px; /* Ajuste la largeur de l'image */
+  padding-right: 50px;
+  height: auto; /* Conserve le ratio d'aspect */
+  border-radius: 5px; /* Ajoute des bords légèrement arrondis */
+  transition: transform 0.3s ease; /* Ajoute une animation au survol */
+}
+
+/* Effet au survol du logo */
+.side-nav .logo img:hover {
+  transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Ajoute une ombre douce */
 }
 
 #map {
