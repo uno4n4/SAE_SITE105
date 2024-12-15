@@ -101,39 +101,78 @@ article{
 }
 
 /*FOOTER*/
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;   /* Les éléments s'ajustent à la largeur de l'écran */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-.titre{
-    margin: 2.3em auto;
+  /*VoyAsia titre*/
+  footer .titre{
+    margin: 20px auto;
+    color:aquamarine;
+}
+  
+  /* Section individuelle */
+  .footer-section {
+    flex: 1;      /*chaque section prend une part egale*/
+    margin: 0 20px;
+    min-width: 200px;
+  }
+  
+  .footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    text-transform: uppercase;   /*txt en majuscule*/
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footer-section a:hover {
+    color: #666666;
+  }
+
+  
+  /*icone réseaux*/
+  .social-icons a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icons i {
+    margin-right: 10px;
+  }
+  
+  /* Bas de page */
+  .footer-bottom {
     text-align: center;
-}
-
-.footer-r{
-    float:right;
-    background-color: black;
-    width:20%;
-}
-
-.footer-r p{
-    margin:2em 5%;
-}
-
-.footer-left{
-    width:30%;
-    margin-left:10%;
-}
-
-.footer-l{
-    float:left;
-    background-color: black;
-    width:20%;
-}
-
-.footer-l i{
-    margin:2em 2%;
-}
-
-footer{
-    color:#fff;
-    background-color: black;
-    height: 500px;
-}
+    margin-top: 20px;
+    border-top: 1px solid #333333;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #777777;
+  }
