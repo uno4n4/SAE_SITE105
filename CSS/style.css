@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Police standard pour le texte principal */
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -7,7 +7,7 @@ body {
 }
 
 body h2 {
-  color: #00627b;
+  color: #00627b; /* Couleur principale pour les titres H2 */
   text-align: center;
 }
 
@@ -19,9 +19,9 @@ body p {
 
 header {
   background-color: #333333;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #ddd; /* Ligne discrète pour délimiter l'en-tête */
   position: relative;
-  padding: 20px;
+  padding: 20px; /* Ajoute de l'espace autour du contenu de l'en-tête */
   text-align: center;
 }
 
@@ -41,7 +41,7 @@ button {
   color: #fff;
   border: none;
   padding: 12px 20px;
-  border-radius: 5px;
+  border-radius: 5px; /* Coins arrondis pour un effet moderne */
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -54,7 +54,7 @@ button:hover {
 /*Mode sombre */
 
 body.dark-mode {
-  background-color: #111111;
+  background-color: #111111; /* Fond sombre pour une meilleure lisibilité la nuit */
 }
 
 body.dark-mode h1,
@@ -68,7 +68,7 @@ body.dark-mode h4 {
 }
 
 .dark-mode .side-nav {
-  background-color: #000000c1;
+  background-color: #000000c1; /* Fond semi-transparent pour un effet esthétique */ 
   color: #005b96;
 }
 
@@ -125,7 +125,7 @@ body.dark-mode h4 {
   padding: 10px 15px;
   font-size: 18px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1000; /* Assure que ce bouton reste toujours au-dessus */
 }
 
 .side-nav {
@@ -135,7 +135,7 @@ body.dark-mode h4 {
   height: 100%;
   width: 200px;
   background-color: white;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Ajoute une ombre pour la profondeur */
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -158,11 +158,11 @@ body.dark-mode h4 {
   text-decoration: none;
   font-size: 18px;
   color: #00627b;
-  transition: color 0.3s;
+  transition: color 0.3s; /* Change progressivement la couleur au survol */
 }
 
 .side-nav ul li a:hover {
-  color: #74c3d7;
+  color: #74c3d7; /* Couleur plus claire au survol */
 }
 
 /* Boutons dans le menu */
@@ -247,15 +247,15 @@ body.dark-mode h4 {
   position: absolute;
   width: 15px;
   height: 15px;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(255, 0, 0); /* Rouge vif pour rendre les marqueurs visibles */
   border: 2px solid white;
-  border-radius: 50%;
+  border-radius: 50%; /* Rond parfait */
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease; /* Animation au survol */
 }
 
 .marker:hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Agrandit légèrement le marqueur au survol */
   background-color: #959b9c;
 }
 
@@ -279,7 +279,7 @@ body.dark-mode h4 {
   width: 200px; 
   height: 150px; 
   background-color: #fff; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Légère ombre pour un effet flottant */
   border-radius: 8px; 
   overflow: hidden; 
   display: none;
@@ -368,7 +368,7 @@ body.dark-mode h4 {
 }
 
 footer {
-  background-color: #1a1a1a;
+  background-color: #1a1a1a; /* Fond sombre pour le pied de page */
   color: white;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
@@ -376,8 +376,8 @@ footer {
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: space-between; /* Aligne les sections du footer de façon égale */
+  flex-wrap: wrap; /* Permet au contenu de s'adapter sur plusieurs lignes si nécessaire */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -406,7 +406,7 @@ footer {
 }
 
 .footer-section a {
-  color: #bdbdbd;
+  color: #bdbdbd; /* Liens en gris clair */
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s;
@@ -429,7 +429,7 @@ footer {
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
-  border-top: 1px solid #333333;
+  border-top: 1px solid #333333; /* Ligne séparatrice discrète */
   padding-top: 10px;
   font-size: 14px;
   color: #777777;
