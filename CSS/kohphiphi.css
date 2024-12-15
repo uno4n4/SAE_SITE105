@@ -35,6 +35,7 @@ body{
     width: 100px;
 }
 
+/*header de presentation*/
 header{
     margin:auto;
     border-radius: 20px;
@@ -58,6 +59,43 @@ header p{
     margin:0 15% 30px 15%;
     text-align:left;
     color:#fff;
+}
+
+/* Section météo */
+#weather {
+    background-color: aquamarine;
+    padding: 5px; 
+    border-radius: 5px;
+    width: 100px; 
+    font-size: 12px; 
+    margin-top: 10px;
+    right: 20px; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* S'assurer que ça reste au-dessus des autres éléments */
+}
+
+
+#weather h2 {
+    color: black;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+
+#weather iframe {
+    width: 100px; /* Réduction de la largeur de l'iframe */
+    height: 70px; /* Réduction de la hauteur de l'iframe */
+    border: none; /* Suppression de la bordure par défaut */
+}
+
+
+/* carte de kohphiphi caché initialement */
+#carte{
+    display:none;
+    height: 300px;
 }
 
 #logo-site{
