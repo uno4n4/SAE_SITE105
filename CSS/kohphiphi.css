@@ -283,54 +283,63 @@ button:active{
     background-color:black;
 }
 
+/*appliqué aux titres de la page*/
 .titre{
     color: rgb(13, 137, 95);
     font-size: 40px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/*bloc de couleur*/
 .separateur{
     padding:15px;
     margin-bottom:30px;
     background-color: #7dafa2a8;
 }
+
+/* Centrage des éléments dans certaines sections */
 .centre{
     text-align: center;
     margin:70px auto;
     width:50%;
 }
 
+/*image de fond cadre phiphidon*/
 #don{
     background-image: url('../IMAGES/phi-don.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+/*image de fond cadre phiphileh*/
 #leh{
     background-image: url('../IMAGES/phi-leh.avif');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+/*disposition de 2 colones des cadres don et leh*/
 .iles{
     display:flex;
     justify-content: space-evenly;
 }
 
+/*titres don, leh*/
 .iles strong{
     font-size: 50px;
     font-family: fantasy;
     color:rgb(13, 137, 95);
 }
 
-#don p{
+#don p{ /*pour améliorer la visibilité*/
     background-color: #0b00006d;
 }
 
-#leh p:last-child{
+#leh p:last-child{   /*que le denrnier car le premier est assez visible*/
     background-color: #2b04043e;
 }
 
+/*texte cadre don, leh*/
 .iles div{
     width: 40%;
     line-height: 1.3em;
@@ -343,16 +352,18 @@ button:active{
     border-radius: 15px;
 }
 
+/*TABLEAU*/
 table{
     margin-top: 30px;
-    border-collapse: collapse;
+    border-collapse: collapse;   /* Fusion des bordures des cellules */
     width: 100%;
 }
 
 table td, th{
-    border: solid rgb(59, 59, 59) 1px;
+    border: solid rgb(59, 59, 59) 1px;   /* Bordure grise autour des cellules */
 }
 
+/* Style des prix activité baht */
 .price1{
     background-color:rgb(28, 108, 81);
     border-radius: 15px;
@@ -361,6 +372,7 @@ table td, th{
     margin:20px auto;
 }
 
+/* Style des prix  activité euros */
 .price2{
     background-color:rgb(207, 238, 228);
     border-radius: 15px;
@@ -369,12 +381,14 @@ table td, th{
     margin:7px auto;
 }
 
+/*colonnes activités*/
 .activity{
     display: flex;
     justify-content:space-around;
     margin-bottom:5%;
 }
 
+/*contenu de chaque activité*/
 .activity ul{
     border-radius: 15px;
     border: 1px solid black;
@@ -393,21 +407,26 @@ table td, th{
     font-size:20px;
 }
 
+/*dimension images activités*/
 .activity img{
     width: 100%;
     margin-top:10px;
 }
 
-#info{
-    width:7%;
-    margin:7%;
-    float: left;
-}
-
+/* Cadre des Conseils à gauche */
 .tips{
     margin-left:4%;
     width:30%;
     float:left;
+}
+
+/* Cadre de La Plage film à droite */
+#film{
+    width: 55%;
+    float:right;
+    padding:3%;
+    border-radius: 15px;
+    border: 7px dashed #014747;
 }
 
 #film img{
@@ -417,14 +436,7 @@ table td, th{
     border-radius: 15px;
 }
 
-#film{
-    width: 55%;
-    float:right;
-    padding:3%;
-    border-radius: 15px;
-    border: 7px dashed #014747;
-}
-
+/*FOOTER*/
 footer {
     margin-top: 10px;
     background-color: rgb(6, 53, 37); /* Reprise de la barre de navigation */
@@ -433,17 +445,19 @@ footer {
     text-align: center;
 }
 
+/*titre footer au couleur de la page*/
 footer .titre{
     margin: 20px auto;
     color:aquamarine;
 }
 
+/*texte footer*/
 footer p {
     margin: 0;
 }
 
 footer a {
-    color: aquamarine; /* Lien accent plage */
+    color: aquamarine; /* Lien footer couleur de la page page */
     text-decoration: none;
 }
 
