@@ -206,6 +206,83 @@ button:active{
     transform: rotate(3.142rad);
 }
 
+/*mode sombre*/
+.dark-mode #toggle-nav {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    font-size: 24px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+
+.dark-mode #toggle-nav:hover {
+    background-color: aquamarine;
+}
+
+
+.dark-mode #toggle-nav:active {
+    transform: scale(0.95);
+}
+
+.dark-mode .fond{
+    background-color:black;
+    color:#fff;
+}
+
+.dark-mode nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #000000cb; /* Fond semi-transparent */
+    color: aquamarine;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease; /* Animation pour le défilement */
+    z-index: 999;  
+}
+
+.dark-mode .separateur {
+    background-color: #014747; /* Fond semi-transparent */
+    color:white;
+    transition: background-color 0.3s ease; /* Animation changement couleur */ 
+}
+
+.dark-mode .titre{
+    color:aquamarine;
+}
+
+.dark-mode .activity ul {
+    background-color: #000; /* Fond semi-transparent */
+    color:white;
+    box-shadow:2px 2px 2px rgba(255, 255, 255, 0.548);
+    transition: background-color 0.3s ease; /* Animation changement couleur */ 
+}
+
+.dark-mode .activity .price1, .price2{
+    color:black;
+}
+
+.dark-mode #film {
+    background-color: black; /* Fond semi-transparent */
+    color:white;
+    transition: background-color 0.3s ease; /* Animation changement couleur */ 
+}
+
+.dark-mode footer{
+    background-color:black;
+}
+
 .titre{
     color: rgb(13, 137, 95);
     font-size: 40px;
