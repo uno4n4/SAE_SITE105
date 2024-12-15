@@ -8,20 +8,29 @@
 </head>
 <body>
     <div class="flex-container">
-        <nav class="nav-icons">
-            <button id="zoomIn">Zoom + </button>
-            <button id="zoomOut">Zoom -</button>
-            <button id="toggleDarkMode">Mode sombre</button><!-- à faire -->
-        </nav>
-
-        <header>
-            <h1>Site du Mont Fuji</h1>
-            <a href="../index.html" class="button-link">
-                Accueil
-            </a>
+        <header class="top-nav">
+            <div class="logo-container">
+                <a href="../index.html" class="logo-link">
+                    <img src="../IMAGES/voyasia_logo_blanc_sans_fond.png" alt="Logo VoyAsia" class="logo">
+                </a>
+            </div>
+            <nav class="nav-icons">
+                <button id="zoomIn">Zoom +</button>
+                <button id="zoomOut">Zoom -</button>
+                <button id="toggleDarkMode">Mode sombre</button>
+            </nav>
+            <div class="links-container">
+                <a href="../index.html" class="nav-link">Accueil</a>
+                <a href="../HTML/jordanie.html" class="nav-link">Pétra</a>
+                <a href="../HTML/kohphiphi.html" class="nav-link">Koh Phi Phi</a>
+            </div>
         </header>
 
         <main>
+            <section class="fond-flou narrow-section header-margin">
+                <h1>Site du Mont Fuji</h1>
+            </section>
+
             <section class="fond-flou narrow-section">
                 <h2>Le Mont Fuji : un joyau volcanique du Japon</h2>
                 <figure class="conteneur-image">
@@ -120,12 +129,10 @@
 
         <footer class="bas">
             <div class="footer-content">
-                <a href="../HTML/index.html" class="footer-logo-link">
-                    <img src="../IMAGES/voyasia_logo.webp" alt="Logo VoyAsia" class="footer-logo">
+                <a href="../index.html" class="footer-logo-link">
+                    <img src="../IMAGES/voyasia_logo_blanc_sans_fond.png" alt="Logo VoyAsia" class="footer-logo">
                 </a>
-                <p class="footer-text">Notre site à pour but la découverte de sites touristiques tel que : Pétra en Jordanie - Koh Phi Phi en Thaïlande - Le Mont Fuji au Japon</p>
-                <p class="footer-text">Auteurs : Diaba Samoura - Maxence Coste - Amel Gilet</p>
-                <p class="footer-text">© 2024 Voyasia.com</p>
+                <p class="footer-text">© 2024 découverte de Pétra. Tous droits réservés.</p>
                 <div class="footer-links">
                     <div class="social-icons">
                         <a href="https://x.com" target="_blank" class="social-icon-link">
@@ -139,40 +146,14 @@
                         </a>
                     </div>
                     <div class="legal-links">
-                        <a href="../HTML/mentionlegal.html" class="footer-link">Mentions légales</a>
-                        <a href="../HTML/nouscontacter.html" class="footer-link">Nous contacter</a>
+                        <a href="../HTML/mentions_legales.html" class="footer-link">Mentions légales</a>
+                        <a href="../HTML/savoirplus.html" class="footer-link">Contactez-nous</a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
 
-    <script>
-        const zoomInBtn = document.getElementById('zoomIn');
-        const zoomOutBtn = document.getElementById('zoomOut');
-
-        let zoomLevel = 1;
-
-        zoomInBtn.addEventListener('click', () => {
-            if (zoomLevel < 2) {
-                zoomLevel += 0.1;
-                document.body.style.transform = `scale(${zoomLevel})`;
-                document.body.style.transformOrigin = '0 0';
-            }
-        });
-
-        zoomOutBtn.addEventListener('click', () => {
-            if (zoomLevel > 1) {
-                zoomLevel -= 0.1;
-                document.body.style.transform = `scale(${zoomLevel})`;
-                document.body.style.transformOrigin = '0 0';
-            }
-        });
-
-        const toggleDarkModeBtn = document.getElementById('toggleDarkMode');
-        toggleDarkModeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
+    <script src="../JS/montfuji.js"></script>
 </body>
 </html>
