@@ -2,37 +2,49 @@
 <html lang="fr">
     <head>
         <title>Voyasia</title>
+        <!-- Inclusion de la bibliothèque Font Awesome pour l'icône-->
         <script src="https://kit.fontawesome.com/db9b6937ac.js" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
+        <!-- Permet d'assurer une bonne présentation sur les appareils mobiles-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="../IMAGES/icone.ico">
         <link href="../CSS/kohphiphi.css" rel="stylesheet" type="text/css">
         <script src="../JS/thailande.js" defer></script>
     </head>
     <body>
-    <section id="showcase">
+        <section class="fond">
+    <section id="showcase"><!-- Section principale de presentation -->
+    
     <header>
+        <!--Widget de Météo en direct de l'ile-->
         <section id="weather">
             <h2>Météo actuelle à Koh Phi Phi</h2>
-            <iframe 
-                    id="weather-iframe"
-                    src="https://wttr.in/Koh phi phi?=fr&format=3" 
-                    title="Météo à Koh Phi Phi">
-                </iframe>
+            <iframe id="weather-iframe" src="https://wttr.in/Koh phi phi?=fr&format=3" title="Météo à Koh Phi Phi">
+            </iframe>
         </section>
-    <div id="nav-icons">
-        <a href="index.html"><img id="logo-site" src="../IMAGES/font-noir.png"></a>
-        <button id="zoomIn">Zoom +</button>
-        <button id="zoomOut">Zoom -</button>
-        <button id="toggleDaltonienMode">Mode sombre</button>
-    </div>
-    <nav><ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="montfuji.html">Mont Fuji</a></li>
-            <li><a href="petra.html">Pétra</a></li>
-    </ul></nav>
+    
+        <nav class="side-nav">   <!--Navbar verticale dépliante-->
+            <!-- Menu de navigation principal -->
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="montfuji.html">Mont Fuji</a></li>
+                <li><a href="petra.html">Pétra</a></li>
+            </ul>
+            <!--Boutons WCAG-->
+            <div id="nav-icons">
+                <button id="zoomIn">Zoom +</button>
+                <button id="zoomOut">Zoom -</button>
+                <button id="toggleDaltonienMode">Mode sombre</button>
+            </div>
+        </nav>
+
+        <!--Logo-->
+        <a href="index.html"><img id="logo-site" src="../IMAGES/font-noir.png" alt="logo_VoyAsia"></a>
+        <!--icone pour cacher/presenter la navbar-->
+    <button id="toggle-nav">☰</button>
+    <!--Presentation de Kohphiphi-->
         <h1>L'Archipel des îles Koh Phi Phi</h1>
-        <p>L'archipel de <strong id="emplacement">Koh Phi Phi</strong>, situé dans la mer d'Andaman, au sud de la Thaïlande, fait partie du parc national de
+        <p>L'archipel de <strong id="emplacement">Koh Phi Phi<iframe id="carte" src="https://fr-fr.topographic-map.com/map-xq125k/%C3%8Eles-Phi-Phi/?center=7.73297%2C98.7835&zoom=13" title="cartekohphiphi"></iframe></strong>, situé dans la mer d'Andaman, au sud de la Thaïlande, fait partie du parc national de
             Hat Noppharat Thara – Mu Ko Phi Phi. Il se compose de six îles, dont les deux principales sont Koh Phi Phi Don
              et Koh Phi Phi Le.</p>   <!-- hover popup d'une carte emplacement de koh phi phi-->
        <p>L'archipel se trouve dans une position stratégique entre Koh Lanta (à 30 km) et Phuket (à 45 km, environ 1 heure en bateau), ce qui
@@ -41,7 +53,8 @@
               blanc, des eaux cristallines, et des récifs de coraux.</p>
     </header>
     </section>
-    <section class="separateur">
+
+    <section class="separateur"><!-- Séparateur info périodes recommandées pour visiter -->
     <div class="centre">
         <h1 class="titre"> Y Aller </h1>
         <p> Koh Phi Phi attire chaque année des milliers de touristes, surtout pendant la saison haute, de décembre à janvier, où plus de 5000 
@@ -51,19 +64,22 @@
     </section>
 
     <div class="clr"></div>
-        <section class="iles">
+        <section class="iles"><!-- Séparateur info sur 2 iles pricipales -->
+            <!--Phi Don-->
             <div id="don"><p><strong>Koh Phi Phi Don</strong></p>
             <p>C’est l'île la plus grande et la plus développée de l'archipel. Elle est reconnue comme l'une des dix plus belles
                  îles de Thaïlande. D'une superficie de 12,25 km², elle propose des hébergements variés pour les visiteurs, allant des simples 
                  bungalows aux resorts de luxe. Koh Phi Phi Don est également un lieu privilégié pour la plongée sous-marine et est célèbre pour ses
                   falaises calcaires impressionnantes.</p></div>
+            <!--Phi le-->
             <div id="leh"><p><strong>Koh Phi Phi Le</strong></p>
             <p> Moins développée que Koh Phi Phi Don, cette île est mondialement connue pour avoir servi de décor au film The "Beach (La Plage)"
                  avec Leonardo DiCaprio en 1999. Ce film a contribué à attirer une foule de touristes. Bien que l'île ait été touchée par un tsunami
                   en 2004, les dégâts sont aujourd'hui presque invisibles. Elle demeure une destination idéale pour les amoureux de la nature, avec 
                   ses plages spectaculaires et ses eaux cristallines.</p></div>
         </section>
-        <section class="separateur">
+
+        <section class="separateur"><!-- Section TAB accès et transport -->
             <div class="centre">
                 <h1 class="titre"> Accès et Transport</h1>
                 <table>
@@ -89,67 +105,64 @@
                     </tr>
                 </table>
             </div>
-            </section>
+        </section>
 
+    <!-- Section activités touristiques -->
     <div class="clr"></div>
             <h4>Les visiteurs peuvent pratiquer diverses activités telles que :</h4>
+            <!--ligne 1/2-->
         <div class="activity">
                 <ul>
                     <li>Snorkeling et plongée sous-marine </li>
                     <li><img src="../IMAGES/snorkeling.webp" title="snorkeling" alt="paysage coraux snorkeling"></li>
-                    <li><img src="../IMAGES/info.webp" id="info" alt="icone Informations"></li>
                     <li class="price1">3620฿40 <i class="fa-solid fa-user"></i></li>
                     <li class="price2">100€ <i class="fa-solid fa-user"></i></li>
                 </ul>
                 <ul>
                     <li>Kayak</li>
                     <li><img src="../IMAGES/kayak.webp" title="kayak" alt="session kayak"></li>
-                    <li><img src="../IMAGES/info.webp" id="info" alt="icone Informations"></li>
                     <li class="price1">100฿ par heures</li>
                     <li class="price2">3€ par heures</li>
                 </ul>
                 <ul>
                     <li>Randonnée dans les paysages époustouflants</li>
                     <li><img src="../IMAGES/montagne.webp" title="ile koh phi phi" alt="ile koh phi phi"></li>
-                    <li><img src="../IMAGES/info.webp" id="info" alt="icone Informations"></li>
                     <li class="price1">à partir de 500฿ <i class="fa-solid fa-user"></i></li>
                     <li class="price2">soit 13€ <i class="fa-solid fa-user"></i></li>
                 </ul>
                 <ul>
                     <li>Détente sur les plages paradisiaques</li>
                     <li><img src="../IMAGES/plage.webp" title="Plage Koh Phi Phi" alt="Plage Koh Phi Phi"></li>
-                    <li><img src="../IMAGES/info.webp" id="info" alt="icone Informations"></li>
                     <li>Les incontournables:</li>
                     <li>Maya Bay - Ao Ton Sai</li>
                     <li>Loh Dalum Bay - Bamboo Island</li>
                 </ul>
         </div>
+        <!--ligne 2/2-->
         <div class="activity">
             <ul>
                 <li>Fêtes animées et spectacles de feu sur les plages</li>
                 <li><img src="../IMAGES/fire-show.webp" title="Spectacle de feu" alt="Spectacle de feu sur la plage"></li>
-                <li><img src="../IMAGES/info.webp" id="info" alt="icone Informations"> Pour les fêtards, les zones de Ton Sai et Loh Dalum sont les plus prisées pour leur ambiance festive, avec des bars et des événements en soirée.</li>
+                <li>Pour les fêtards, les zones de Ton Sai et Loh Dalum sont les plus prisées pour leur ambiance festive, avec des bars et des événements en soirée.</li>
             </ul> 
             <ul>
                 <li>Dégustation de fruits de mer frais et locaux</li>
                 <li><img src="../IMAGES/degustation.webp" title="Plateau de fruits de mer" alt="Plateau de fruits de mer"></li>
-                <li><img src="../IMAGES/info.webp" id="info" alt="icone Informations"></li>
                 <li>Oasis bar & restaurant Phi Phi Island</li>
                 <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjSyp-fjIKKAxVJT6QEHetzEFYQ4kB6BAg9EAM&url=%2Fmaps%2Fplace%2F%2Fdata%3D!4m2!3m1!1s0x3051de95708a2bb9%3A0x9755d80f072a37bc%3Fsa%3DX%26ved%3D1t%3A8290%26ictx%3D111&usg=AOvVaw3YqvwME5lYKGhsei0xYlpc&opi=89978449">Localisation du restaurant</a></li>
             </ul>
             <ul>
                 <li>Salons de tatouage pour les souvenirs corporels</li>
                 <li><img src="../IMAGES/tattoo.webp" title="tatouage traditionnel thaïlandais" alt="Session tatouage traditionnel thaïlandais"></li>
-                <li><img src="../IMAGES/info.webp" id="info" alt="icone Informations"></li>
                 <li class="price1">entre 100฿ et 10 000฿ en fonction de la taille</li>
                 <li class="price2">soit 25€ à 260€</li>
             </ul>
             <ul>
                 <li>Excursions autour de l'archipel</li>
                 <li><img src="../IMAGES/excursions.webp" title="Paysage excursion Koh Phi Phi" alt="Excursion plages de Koh Phi Phi"></li>
-                <li><img src="../IMAGES/info.webp" id="info" alt="icone Informations"></li>
                 <li class="price1">1810฿20 <i class="fa-solid fa-user"></i></li>
                 <li class="price2">100€ <i class="fa-solid fa-user"></i></li>
+                <li><a href="#ancre">+ Tips</a></li>  <!--lien ancre vers recommandation-->
             </ul>
         </div>
 
@@ -186,5 +199,6 @@
         <h1 class="titre">VoyAsia</h1>
             <p>&copy; 2024 découverte de Pétra. Tous droits réservés. <a href="mailto:voyasia@hotmail.com">Contactez-nous</a></p>
         </footer>
+        </section>
     </body>
 </html>
