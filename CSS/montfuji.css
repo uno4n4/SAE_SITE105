@@ -1,6 +1,6 @@
 body {
-  margin: 0; /* Supprime les marges par défaut du corps de la page */
-  padding: 0; /* Supprime les paddings par défaut du corps de la page */
+  margin: 0;
+  padding: 0;
   font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 0.05em;
   text-align: center;
@@ -20,8 +20,65 @@ body {
   min-height: 100vh;
 }
 
+.top-nav {
+  background-color: #02245F;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  flex: 1;
+  text-align: left;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+.logo-link {
+  text-decoration: none;
+  border: none;
+  background: none;
+}
+
+.logo-container img {
+  width: 120px;
+  height: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  background: none;
+}
+
+.nav-icons {
+  flex: 1;
+  text-align: center;
+}
+
+.links-container {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #ddd;
+}
+
 main {
-  flex: 1; /* Permet à la section principale d'occuper tout l'espace disponible */
+  flex: 1;
 }
 
 h1 {
@@ -43,11 +100,11 @@ img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff, 0 0 30px #ffffff;
-  transition: transform 0.3s ease-in-out; /* Ajout de la transition pour l'effet de grossissement */
+  transition: transform 0.3s ease-in-out;
 }
 
 img:hover {
-  transform: scale(1.02); /* Grossissement de l'image */
+  transform: scale(1.02);
 }
 
 button {
@@ -61,14 +118,14 @@ button {
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
-  transform: scale(1); /* Ajout de la transition pour l'effet de grossissement */
+  transform: scale(1);
 }
 
 button:hover {
-  transform: scale(1.02); /* Grossissement du bouton */
+  transform: scale(1.02);
   color: black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  background-color: white; /* Assure que le fond reste blanc */
+  background-color: white;
 }
 
 button::after {
@@ -86,7 +143,7 @@ button::after {
 }
 
 button:hover::after {
-  opacity: 0; /* Empêche le noircissement */
+  opacity: 0;
 }
 
 .button-link {
@@ -106,10 +163,10 @@ button:hover::after {
 }
 
 .button-link:hover {
-  transform: scale(1.02); /* Grossissement du bouton */
+  transform: scale(1.02);
   color: black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  background-color: white; /* Assure que le fond reste blanc */
+  background-color: white;
 }
 
 .button-link::after {
@@ -127,16 +184,16 @@ button:hover::after {
 }
 
 .button-link:hover::after {
-  opacity: 0; /* Empêche le noircissement */
+  opacity: 0;
 }
 
 .tableau-arrondi {
   margin: 0 auto;
   border-collapse: collapse;
   width: 80%;
-  border-radius: 15px; /* Ajout de border-radius pour arrondir les coins */
-  overflow: hidden; /* Assure que le contenu ne dépasse pas les coins arrondis */
-  border: 2px solid black; /* Ajout d'une bordure plus visible */
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid black;
 }
 
 .tableau-arrondi th, .tableau-arrondi td {
@@ -162,9 +219,9 @@ button:hover::after {
 }
 
 .narrow-section {
-  max-width: 1150px; /* Ajustez cette valeur pour définir la largeur souhaitée */
+  max-width: 1150px;
   margin: 0 auto;
-  margin-bottom: 40px; /* Ajoute un écart entre les sections */
+  margin-bottom: 40px;
 }
 
 .texte-centre {
@@ -208,20 +265,20 @@ button:hover::after {
 }
 
 .bas {
-  background-color: black;
+  background-color: #02245F;
   color: white;
   text-align: center;
   padding: 20px 0;
-  width: 100%; /* Assure que le pied de page prend toute la largeur */
-  box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+  width: 100%;
+  box-sizing: border-box;
   position: relative;
-  min-height: 100px; /* Ajoute une hauteur minimale pour s'assurer que le pied de page occupe suffisamment d'espace */
+  min-height: 100px;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* Ajoute un padding pour éviter que le contenu ne touche les bords */
+  padding: 0 20px;
 }
 
 .footer-logo-link {
@@ -234,13 +291,13 @@ button:hover::after {
 .footer-logo-link img {
   width: 120%;
   height: auto;
-  border-radius: 0; /* Désactive le border-radius */
-  box-shadow: none; /* Désactive le box-shadow */
-  transition: none; /* Désactive les effets de transition */
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
 }
 
 .footer-logo-link img:hover {
-  transform: none; /* Désactive le grossissement */
+  transform: none;
 }
 
 .footer-text {
@@ -267,13 +324,13 @@ button:hover::after {
 .social-icon-link img {
   width: 30px;
   height: 30px;
-  border-radius: 0; /* Désactive le border-radius */
-  box-shadow: none; /* Désactive le box-shadow */
-  transition: none; /* Désactive les effets de transition */
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
 }
 
 .social-icon-link img:hover {
-  transform: none; /* Désactive le grossissement */
+  transform: none;
 }
 
 .legal-links {
@@ -291,11 +348,12 @@ button:hover::after {
 .footer-link:hover {
   color: #ddd;
 }
+
 /* Styles pour le mode sombre */
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
-  background-image: none; /* Désactive l'image de fond */
+  background-image: none;
 }
 
 body.dark-mode h1, body.dark-mode h2 {
@@ -333,4 +391,13 @@ body.dark-mode .button-link, body.dark-mode button {
 body.dark-mode .button-link:hover, body.dark-mode button:hover {
   background-color: #444444;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode img {
+  box-shadow: none;
+}
+
+/* Nouvelle classe pour la marge supérieure */
+.header-margin {
+    margin-top: 40px; /* Vous pouvez ajuster cette valeur selon vos préférences */
 }
