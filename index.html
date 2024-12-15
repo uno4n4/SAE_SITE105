@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" href="./IMAGES/icone.ico">
-    <script src="https://kit.fontawesome.com/76ad15112d.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="./IMAGES/icone.ico"> <!-- Favicon de la page -->
+    <script src="https://kit.fontawesome.com/76ad15112d.js" crossorigin="anonymous"></script> <!-- Bibliothèque d'icônes Font Awesome -->
     <link href="./CSS/style.css" rel="stylesheet">
-    <script src="./JS/index.js" defer></script>
+    <script src="./JS/index.js" defer></script> <!-- Le script est différé pour ne pas bloquer le chargement de la page -->
     <title>VoyAsia</title>
 </head>
 <body>
@@ -16,22 +16,25 @@
         <h1>Les 3 meilleurs sites touristiques en 2024</h1>
         <nav class="side-nav">
             <figure class="logo">
+                <!-- Affichage de deux versions du logo (clair/sombre) selon le thème -->
                 <img src="../IMAGES/voyasia_logo_noir_sans_fond.png" id="logo-clair" class="logo" alt="Logo Voyasia">
                 <img src="../IMAGES/voyasia_logo.webp" id="logo-sombre" class="logo" alt="Logo Voyasia sombre">
             </figure>
             <ul>
+                <!-- Liens vers les pages des destinations -->
                 <li><a href="./HTML/jordanie.html">Jordanie</a></li>
                 <li><a href="./HTML/montfuji.html">Mont Fuji</a></li>
                 <li><a href="./HTML/kohphiphi.html">Thailande</a></li>
                 <li><a href="./HTML/savoirplus.html">En Savoir Plus</a></li>
             </ul>
             <div class="nav-icons">
+                <!-- Boutons d'interaction pour zoom et mode sombre -->
                 <button id="zoomIn">Zoom + </button>
                 <button id="zoomOut">Zoom -</button>
                 <button id="toggleDarkMode">Mode sombre</button>
             </div>
         </nav>
-        <button id="toggle-nav">☰</button>
+        <button id="toggle-nav">☰</button> <!-- Bouton pour afficher/masquer le menu de navigation -->
     </header>
 
     <!-- Contenu principal -->
@@ -47,7 +50,8 @@
             <h2>Explorez l'Asie</h2>
             <p>Prêt(e) à découvrir les merveilles du monde ? <br> Cliquez sur l'une des destinations pour commencer votre voyage virtuel et planifiez votre prochaine aventure dès aujourd'hui !</p>
             <figure class="map-container">
-                <img src="./IMAGES/earth.jpg" alt="Carte de la Terre centrée sur l'Asie">
+                <img src="./IMAGES/earth.jpg" alt="Carte de la Terre centrée sur l'Asie"> <!-- Image de la carte affichée -->
+                <!-- Marqueurs sur la carte, associés à chaque destination -->
                 <span class="marker" id="marker-jordanie" data-country="jordanie"></span>
                 <span class="marker" id="marker-japon" data-country="japon"></span>
                 <span class="marker" id="marker-thailande" data-country="thailande"></span>
@@ -56,6 +60,7 @@
 
         <!-- Infos sur le pays sélectionné -->
         <section id="country-info">
+            <!-- Contenu dynamique pour afficher l'image et un lien vers une destination sélectionnée -->
             <img id="country-image" src="" alt="Pays" />
             <a id="country-link" href="" class="button">Aller à la page</a>
         </section>
@@ -71,6 +76,7 @@
         <section class="travel-tips">
             <h2>À savoir avant de voyager</h2>
             <div class="tips-grid">
+                <!-- Les icônes aident à visualiser rapidement chaque catégorie -->
                 <article class="tip">
                     <i class="fa-solid fa-passport"></i>
                     <h4>Passeport</h4>
@@ -114,6 +120,7 @@
             <article class="footer-section">
                 <h4>Suivez-nous</h4>
                 <ul>
+                    <!-- Icônes des réseaux sociaux -->
                     <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
