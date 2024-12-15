@@ -13,7 +13,6 @@ body{
 /* Section du showcase (image de fond de présentation) */
 #showcase{
 	background:url('../IMAGES/koh_phi_phi.webp');
-    display:flex;
     justify-content: center;
     align-items:center;
 	text-align: center;
