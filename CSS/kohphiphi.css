@@ -106,10 +106,75 @@ header p{
 
 /* Logo du site */
 #logo-site{
+    margin-top:20px;
     height:40px;
     float:left;
     margin-left: 10px;
 }
+
+/* icone pour la barre de navigation */
+#toggle-nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(6, 53, 37); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+}
+/* Barre de navigation verticale */
+nav {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initialement cachée */
+    height: 100%;
+    width: 250px;
+    background-color: rgb(6, 53, 37); /* Couleur inspirée de Kohphiphi */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease; /* Effet d'animation fluide */
+}
+  
+nav ul {   /*position*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+nav ul li { /*position sections nav*/
+    list-style: none;
+    margin: 20px 0;
+}
+  
+nav ul li a {  /*liens barre nav*/
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s;
+}
+  
+nav ul li a:hover {
+    color: #dcdada;
+}
+  
+  /* Ajout d'une classe "open" js pour animer l'ouverture de la barre de navigation */
+nav.open {
+    left: 0;
+}
+
+nav a.active {
+    color: aquamarine;
+    border-bottom: 2px solid aquamarine;
+}
+
 
 #nav-icons{
     margin-top:2%;
