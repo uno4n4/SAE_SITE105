@@ -7,9 +7,10 @@ body{
 }
 
 .clr{
-    clear: both;
+    clear: both;          /* Pour réinitialiser les flottants */
 }
 
+/* Section du showcase (image de fond de présentation) */
 #showcase{
 	background:url('../IMAGES/koh_phi_phi.webp');
     display:flex;
