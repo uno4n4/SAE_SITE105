@@ -21,6 +21,20 @@ body{
     padding:0 20px;
 }
 
+/* widget de meteo */
+#weather{                  
+    float:right;
+    margin-right: 20px;
+    color:#fff;
+    font-size: 10px;
+}
+
+#weather iframe{
+    background-color: #471001;
+    border-radius: 15px;
+    width: 100px;
+}
+
 header{
     margin:auto;
     border-radius: 20px;
