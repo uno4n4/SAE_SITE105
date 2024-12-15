@@ -12,16 +12,14 @@
         <script src="../JS/thailande.js" defer></script>
     </head>
     <body>
+        <section class="fond"></section>
     <section id="showcase"><!-- Section principale de presentation -->
     
         <header>
         <!--Widget de Météo en direct de l'ile-->
         <section id="weather">
             <h2>Météo actuelle à Koh Phi Phi</h2>
-            <iframe 
-                    id="weather-iframe"
-                    src="https://wttr.in/Koh phi phi?=fr&format=3" 
-                    title="Météo à Koh Phi Phi">
+            <iframe id="weather-iframe" src="https://wttr.in/Koh phi phi?=fr&format=3" title="Météo à Koh Phi Phi">
             </iframe>
         </section>
     
@@ -57,7 +55,8 @@
               blanc, des eaux cristallines, et des récifs de coraux.</p>
     </header>
     </section>
-    <section class="separateur">
+
+    <section class="separateur"><!-- Séparateur info périodes recommandées pour visiter -->
     <div class="centre">
         <h1 class="titre"> Y Aller </h1>
         <p> Koh Phi Phi attire chaque année des milliers de touristes, surtout pendant la saison haute, de décembre à janvier, où plus de 5000 
@@ -67,12 +66,14 @@
     </section>
 
     <div class="clr"></div>
-        <section class="iles">
+        <section class="iles"><!-- Séparateur info sur 2 iles pricipales -->
+            <!--Phi Don-->
             <div id="don"><p><strong>Koh Phi Phi Don</strong></p>
             <p>C’est l'île la plus grande et la plus développée de l'archipel. Elle est reconnue comme l'une des dix plus belles
                  îles de Thaïlande. D'une superficie de 12,25 km², elle propose des hébergements variés pour les visiteurs, allant des simples 
                  bungalows aux resorts de luxe. Koh Phi Phi Don est également un lieu privilégié pour la plongée sous-marine et est célèbre pour ses
                   falaises calcaires impressionnantes.</p></div>
+            <!--Phi le-->
             <div id="leh"><p><strong>Koh Phi Phi Le</strong></p>
             <p> Moins développée que Koh Phi Phi Don, cette île est mondialement connue pour avoir servi de décor au film The "Beach (La Plage)"
                  avec Leonardo DiCaprio en 1999. Ce film a contribué à attirer une foule de touristes. Bien que l'île ait été touchée par un tsunami
