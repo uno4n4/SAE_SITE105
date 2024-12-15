@@ -175,14 +175,19 @@ nav a.active {
     border-bottom: 2px solid aquamarine;
 }
 
-
-#nav-icons{
+/* Boutons WCAG de la barre de navigation*/
+  /*probleme quand on appuie sur un bouton tous disparaissent*/
+  #nav-icons{
     margin-top:2%;
 }
 
-header #nav-icons button{
+#nav-icons button{
     border-radius: 15px;
 } /*probleme ici c'etait une faute*/
+
+#nav-icons :nth-child(3){
+    margin-top: 10px;
+}
 
 button{
     background-color:aquamarine;
@@ -193,24 +198,12 @@ button{
     font-size:1rem;
 }
 
-nav{
-    float: right;
+button:hover{
+    color:rgb(99, 193, 162);
 }
 
-nav li{
-    list-style-type:none;
-    font-size: 18px;
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#fff
-}
-
-nav a:active{
-    color:yellow;
+button:active{
+    transform: rotate(3.142rad);
 }
 
 .titre{
