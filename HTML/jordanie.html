@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/76ad15112d.js" crossorigin="anonymous"></script>
-    <link href="../CSS/jordanie.css" rel="stylesheet">
-    <script src="../JS/jordanie.js" defer></script>
-    <link rel="icon" type="image/jpg" href="../IMAGES/icone.ico">
-    <title>Découverte de Pétra</title>
+    <meta charset="UTF-8"> <!-- Encodage UTF-8 pour les caractères spéciaux -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adaptation aux écrans mobiles -->
+    <script src="https://kit.fontawesome.com/76ad15112d.js" crossorigin="anonymous"></script> <!-- Icones FontAwesome -->
+    <link href="../CSS/jordanie.css" rel="stylesheet"> <!-- Lien vers le fichier CSS -->
+    <script src="../JS/jordanie.js" defer></script> <!-- Script JS chargé après le HTML -->
+    <link rel="icon" type="image/jpg" href="../IMAGES/icone.ico"> <!-- Icône de l'onglet -->
+    <title>Découverte de Pétra</title> <!-- Titre affiché dans l'onglet -->
 </head>
 <body>
 
@@ -18,41 +18,42 @@
                     id="weather-iframe"
                     src="https://wttr.in/Petra?=fr&format=3" 
                     title="Météo à Pétra">
-                </iframe>
+                </iframe> <!-- Iframe pour afficher la météo actuelle -->
         </section>        
     </header>
 
-    <button id="toggle-nav">☰</button>
+    <button id="toggle-nav">☰</button> <!-- Bouton pour ouvrir/fermer le menu -->
     <nav class="side-nav">
         <div class="logo">
-            <img src="../IMAGES/voyasia_logo_noir_sans_fond.png" id="logo-clair" class="logo" alt="Logo Voyasia">
-            <img src="../IMAGES/voyasia_logo.webp" id="logo-sombre" class="logo" alt="Logo Voyasia sombre">
+            <img src="../IMAGES/voyasia_logo_noir_sans_fond.png" id="logo-clair" class="logo" alt="Logo Voyasia"> <!-- Logo pour le mode clair -->
+            <img src="../IMAGES/voyasia_logo.webp" id="logo-sombre" class="logo" alt="Logo Voyasia sombre"> <!-- Logo pour le mode sombre -->
         </div>
         <ul class="nav-links">
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="montfuji.html">Japon : Mont Fuji</a></li>
+            <li><a href="../index.html">Accueil</a></li> <!-- Lien vers la page d'accueil -->
+            <li><a href="montfuji.html">Japon : Mont Fuji</a></li> <!-- Lien vers une autre destination -->
             <li><a href="../HTML/kohphiphi.html">Thailande : Koh Phi Phi</a></li>
             <li><a href="savoirplus.html">En Savoir Plus</a></li>
         </ul>
         <div class="nav-icons">
-            <button id="zoomIn">Zoom + </button>
-            <button id="zoomOut">Zoom -</button>
-            <button id="toggleDarkMode">Mode sombre</button>
+            <button id="zoomIn">Zoom + </button> <!-- Bouton pour agrandir le zoom -->
+            <button id="zoomOut">Zoom -</button> <!-- Bouton pour réduire le zoom -->
+            <button id="toggleDarkMode">Mode sombre</button> <!-- Activation/désactivation du mode sombre -->
         </div>
     </nav>
 
+    <!-- Stickers décoratifs -->
     <div class="sticker left">
-        <img src="../IMAGES/palmier.webp" alt="palmier1">
+        <img src="../IMAGES/palmier.webp" alt="palmier1"> <!-- Image décorative sur la gauche -->
     </div>
     <div class="sticker right">
-        <img src="../IMAGES/palmier.webp" alt="palmier2">
+        <img src="../IMAGES/palmier.webp" alt="palmier2"> <!-- Image décorative sur la droite -->
     </div>
 
-    <button id="backToTop" title="Retour en haut">↑</button>
+    <button id="backToTop" title="Retour en haut">↑</button> <!-- Bouton pour remonter en haut de la page -->
 
     <header class="hero">
         <div class="hero-content">
-        <h1>Pétra, la cité Rose</h1>
+        <h1>Pétra, la cité Rose</h1> <!-- Titre principal -->
         <p>Une des sept merveilles du monde, nichée au coeur de la Jordanie.</p>
         <button id="learnMore">En savoir plus</button>
         </div>
@@ -60,7 +61,7 @@
 
     <main>
         <section id="about">
-            <h2>A propos de Pétra</h2>
+            <h2>À propos de Pétra</h2>
             <p>Pétra est une ancienne cité Nabatéenne, située au sud-ouest de la Jordanie, inscrite au patrimoine Mondial de l'UNESCO. Ses monuments sont taillés dans la roche il y a plus de 2 000 ans.</p>
         </section>
 
@@ -68,6 +69,7 @@
             <h2>Accès à Pétra</h2>
             <p>Pétra est à environ 240km au sud d'Amman, la capitale. Voici les principaux moyens d'accès :</p>
             <ul>
+                <!-- Liste des moyens de transport pour accéder à Pétra -->
                 <li><i class="fa-solid fa-plane"></i> Par avion : L'aéroport international Queen Alia (Amman) est le principal aéroport international. Il est à environ 3 heures en voiture de Pétra.</li>
                 <li><i class="fa-solid fa-bus"></i> Par bus : Il existe des bus réguliers qui relient Amman à Pétra. Le trajet dure environ 3 heures.</li>
                 <li><i class="fa-solid fa-car"></i> Par voiture : Louez une voiture pour explorez Pétra à votre propre rythme. Il y a des parkings disponibles près du site.</li>
@@ -88,8 +90,9 @@
         <section id="hightlights">
             <h2>Lieux emblématiques <i class="fa-solid fa-location-dot"></i></h2>
             <div class="cards">
+                <!-- Carte pour chaque lieu emblématique -->
                 <div class="card">
-                    <img src="../IMAGES/siq.jpg" alt="Le Siq">
+                    <img src="../IMAGES/siq.jpg" alt="Le Siq"> <!-- Image du Siq -->
                     <h3>Le Siq</h3>
                     <p>Canyon étroit de 200 mètres de haut menant au Khazneh (le Trésor), célèbre monument sculpté dans la roche.</p>
                 </div>
@@ -109,7 +112,7 @@
         <section id="night">
             <h2>Pétra de nuit :</h2>
                 <video autoplay muted loop class="petra-video">
-                    <source src="../VIDEO/petra_night.mp4" type="video/mp4">
+                    <source src="../VIDEO/petra_night.mp4" type="video/mp4"> <!-- Vidéo mettant en avant Pétra de nuit -->
                     Votre navigateur ne supporte pas la vidéo.
                 </video>
             <p>Découvrez la magie de Pétra illuminée à la bougie lors d'un spectacle unique.</p>
@@ -140,6 +143,7 @@
         <section id="quiz">
             <h2>Testez vos connaissances</h2>
             <p>Quel est le monument le plus célèbre de Pétra ?</p>
+            <!-- Quiz interactif -->
             <button class="quiz-option" data-answer="true">Le Khazneh</button>
             <button class="quiz-option" data-answer="false">Le Colisée</button>
             <button class="quiz-option" data-answer="false">Le Pont de Pétra</button>
