@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="../IMAGES/icone.ico"> <!-- Favicon de la page -->
+    <script src="https://kit.fontawesome.com/76ad15112d.js" crossorigin="anonymous"></script> <!-- Bibliothèque d'icônes Font Awesome -->
+    <link href="../CSS/style.css" rel="stylesheet">
+    <script src="../JS/index.js" defer></script> <!-- Le script est différé pour ne pas bloquer le chargement de la page -->
+    <title>VoyAsia - Comparaison des Destinations</title>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <h1>Comparaison des Meilleures Destinations en 2024</h1>
+        <nav class="side-nav">
+            <figure class="logo">
+                <!-- Affichage de deux versions du logo (clair/sombre) selon le thème -->
+                 <a href="../index.html">
+                <img src="../IMAGES/voyasia_logo_noir_sans_fond.png" id="logo-clair" class="logo" alt="Logo Voyasia">
+                <img src="../IMAGES/voyasia_logo.webp" id="logo-sombre" class="logo" alt="Logo Voyasia sombre"></a>
+            </figure>
+            <ul>
+                <!-- Liens vers les pages des destinations -->
+                <li><a href="../HTML/jordanie.html">Jordanie</a></li>
+                <li><a href="../HTML/montfuji.html">Mont Fuji</a></li>
+                <li><a href="../HTML/kohphiphi.html">Thailande</a></li>
+                <li><a href="../HTML/savoirplus.html">En Savoir Plus</a></li>
+            </ul>
+            <div class="nav-icons">
+                <!-- Boutons d'interaction pour zoom et mode sombre -->
+                <button id="zoomIn">Zoom + </button>
+                <button id="zoomOut">Zoom -</button>
+                <button id="toggleDarkMode">Mode sombre</button>
+            </div>
+        </nav>
+        <button id="toggle-nav">☰</button> <!-- Bouton pour afficher/masquer le menu de navigation -->
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section "Comparaison des Destinations" -->
+        <section>
+            <h2>Comparaison des Destinations</h2>
+            <p>Découvrez quelle destination est la meilleure parmi Pétra, Koh Phi Phi et le Mont Fuji en fonction de divers critères.</p>
+        </section>
+
+        <!-- Section "Pétra" -->
+        <section>
+            <h2>Pétra</h2>
+            <p>Pétra est une ancienne cité Nabatéenne, située au sud-ouest de la Jordanie, inscrite au patrimoine Mondial de l'UNESCO. Ses monuments sont taillés dans la roche il y a plus de 2 000 ans.</p>
+            <ul>
+                <li>Accès : Par avion, bus ou voiture.</li>
+                <li>Saisons idéales : Printemps (mars à mai), Automne (septembre à novembre).</li>
+                <li>Lieux emblématiques : Le Siq, Le Trésor, Le Monastère.</li>
+                <li>Tarifs : 1 jour : 65 €, 2 jours : 70 €, 3 jours : 77 €.</li>
+            </ul>
+        </section>
+
+        <!-- Section "Koh Phi Phi" -->
+        <section>
+            <h2>Koh Phi Phi</h2>
+            <p>L'archipel de Koh Phi Phi, situé dans la mer d'Andaman, au sud de la Thaïlande, fait partie du parc national de Hat Noppharat Thara – Mu Ko Phi Phi. Il se compose de six îles, dont les deux principales sont Koh Phi Phi Don et Koh Phi Phi Le.</p>
+            <ul>
+                <li>Accès : Par ferry depuis Phuket ou Koh Lanta.</li>
+                <li>Saisons idéales : Décembre à janvier, juillet à août, fin octobre à fin mars.</li>
+                <li>Activités : Snorkeling, plongée sous-marine, kayak, randonnée, détente sur les plages.</li>
+                <li>Tarifs : Snorkeling et plongée sous-marine : 3620฿40 (100€), Kayak : 100฿ par heure (3€), Randonnée : à partir de 500฿ (13€).</li>
+            </ul>
+        </section>
+
+        <!-- Section "Mont Fuji" -->
+        <section>
+            <h2>Mont Fuji</h2>
+            <p>Le Mont Fuji, culminant à 3 776 mètres d'altitude, est un volcan emblématique situé sur la côte sud de l'île de Honshu, au Japon. Il est le sommet le plus haut du pays et continue de fasciner des millions de personnes.</p>
+            <ul>
+                <li>Accès : Par avion, transports en commun ou location de voiture.</li>
+                <li>Saisons idéales : Toute l'année, mais l'ascension est recommandée de juillet à septembre.</li>
+                <li>Activités : Ascension, visite de la forêt d'Aokigahara, gastronomie locale.</li>
+                <li>Tarifs : Excursion d’une journée au Mont Fuji : 72 €, Hébergement : à partir de 60 € par nuit.</li>
+            </ul>
+        </section>
+
+        <!-- Section "Conclusion" -->
+        <section>
+            <h2>Conclusion</h2>
+            <p>Après avoir comparé les trois destinations, il apparaît que <strong>Koh Phi Phi</strong> est la meilleure destination en 2024. Elle offre une combinaison unique de beauté naturelle, d'activités variées et de tarifs abordables. Que vous soyez amateur de plongée, de randonnée ou simplement à la recherche de détente sur des plages paradisiaques, Koh Phi Phi a tout pour plaire.</p>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-container">
+            <article class="footer-section">
+                <h4>Informations</h4>
+                <ul>
+                    <li><a href="../HTML/mentions_legales.html">Mentions Legales</a></li>
+                </ul>
+            </article>
+            <article class="footer-section">
+                <h4>Contactez-nous</h4>
+                <ul>
+                    <li><a href="mailto:voyasia@htomail.com">Contactez-nous</a></li>
+                </ul>
+            </article>
+            <article class="footer-section">
+                <h4>Suivez-nous</h4>
+                <ul>
+                    <!-- Icônes des réseaux sociaux -->
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 découverte de l'Asie | Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
