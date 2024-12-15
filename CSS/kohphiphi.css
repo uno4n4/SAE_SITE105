@@ -7,12 +7,12 @@ body{
 }
 
 .clr{
-    clear: both;
+    clear: both;     /* Pour réinitialiser les flottants */
 }
 
+/* Section du showcase (image de fond de présentation) */
 #showcase{
 	background:url('../IMAGES/koh_phi_phi.webp');
-    display:flex;
     justify-content: center;
     align-items:center;
 	text-align: center;
@@ -21,6 +21,21 @@ body{
     padding:0 20px;
 }
 
+/* widget de meteo */
+#weather{                  
+    float:right;
+    margin-right: 20px;
+    color:#fff;
+    font-size: 10px;
+}
+
+#weather iframe{
+    background-color: #471001;
+    border-radius: 15px;
+    width: 100px;
+}
+
+/*header de presentation*/
 header{
     margin:auto;
     border-radius: 20px;
@@ -46,19 +61,133 @@ header p{
     color:#fff;
 }
 
+/* Section météo */
+#weather {
+    background-color: aquamarine;
+    padding: 5px; 
+    border-radius: 5px;
+    width: 100px; 
+    font-size: 12px; 
+    margin-top: 10px;
+    right: 20px; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* S'assurer que ça reste au-dessus des autres éléments */
+}
+
+
+#weather h2 {
+    color: black;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+
+#weather iframe {
+    width: 100px; /* Réduction de la largeur de l'iframe */
+    height: 70px; /* Réduction de la hauteur de l'iframe */
+    border: none; /* Suppression de la bordure par défaut */
+}
+
+
+/* carte de kohphiphi caché initialement */
+#carte{
+    display:none;
+    height: 300px;
+}
+
+#emplacement:hover{
+    #carte{
+        display:block;   /* ici on la revele lorsque l'on passe sur le strong  */
+    }
+}
+
+/* Logo du site */
 #logo-site{
+    margin-top: 20px;
     height:40px;
     float:left;
     margin-left: 10px;
 }
 
-#nav-icons{
+/* icone pour la barre de navigation */
+  #toggle-nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(6, 53, 37); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+}
+/* Barre de navigation verticale */
+nav {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initialement cachée */
+    height: 100%;
+    width: 250px;
+    background-color: rgb(6, 53, 37); /* Couleur inspirée de Kohphiphi */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease; /* Effet d'animation fluide */
+}
+  
+nav ul {   /*position*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+nav ul li { /*position sections nav*/
+    list-style: none;
+    margin: 20px 0;
+}
+  
+nav ul li a {  /*liens barre nav*/
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s;
+}
+  
+nav ul li a:hover {
+    color: #dcdada;
+}
+  
+  /* Ajout d'une classe "open" js pour animer l'ouverture de la barre de navigation */
+nav.open {
+    left: 0;
+}
+
+nav a.active {
+    color: aquamarine;
+    border-bottom: 2px solid aquamarine;
+}
+
+/* Boutons WCAG de la barre de navigation*/
+  /*probleme quand on appuie sur un bouton tous disparaissent*/
+  #nav-icons{
     margin-top:2%;
 }
 
-header #nav-icons button{
+#nav-icons button{
     border-radius: 15px;
 } /*probleme ici c'etait une faute*/
+
+#nav-icons :nth-child(3){
+    margin-top: 10px;
+}
 
 button{
     background-color:aquamarine;
@@ -69,74 +198,148 @@ button{
     font-size:1rem;
 }
 
-nav{
-    float: right;
+button:hover{
+    color:rgb(99, 193, 162);
 }
 
-nav li{
-    list-style-type:none;
-    font-size: 18px;
-    display: inline;
-    margin: 0 15px;
+button:active{
+    transform: rotate(3.142rad);
 }
 
-nav a{
-    text-decoration:none;
-    color:#fff
+/*mode sombre*/
+.dark-mode #toggle-nav {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    font-size: 24px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
-nav a:active{
-    color:yellow;
+
+.dark-mode #toggle-nav:hover {
+    background-color: aquamarine;
 }
 
+
+.dark-mode #toggle-nav:active {
+    transform: scale(0.95);
+}
+
+.dark-mode .fond{
+    background-color:black;
+    color:#fff;
+}
+
+.dark-mode nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #000000cb; /* Fond semi-transparent */
+    color: aquamarine;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease; /* Animation pour le défilement */
+    z-index: 999;  
+}
+
+.dark-mode .separateur {
+    background-color: #014747; /* Fond semi-transparent */
+    color:white;
+    transition: background-color 0.3s ease; /* Animation changement couleur */ 
+}
+
+.dark-mode .titre{
+    color:aquamarine;
+}
+
+.dark-mode .activity ul {
+    background-color: #000; /* Fond semi-transparent */
+    color:white;
+    box-shadow:2px 2px 2px rgba(255, 255, 255, 0.548);
+    transition: background-color 0.3s ease; /* Animation changement couleur */ 
+}
+
+.dark-mode .activity .price1, .price2{
+    color:black;
+}
+
+.dark-mode #film {
+    background-color: black; /* Fond semi-transparent */
+    color:white;
+    transition: background-color 0.3s ease; /* Animation changement couleur */ 
+}
+
+.dark-mode footer{
+    background-color:black;
+}
+
+/*appliqué aux titres de la page*/
 .titre{
     color: rgb(13, 137, 95);
     font-size: 40px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/*bloc de couleur*/
 .separateur{
     padding:15px;
     margin-bottom:30px;
     background-color: #7dafa2a8;
 }
+
+/* Centrage des éléments dans certaines sections */
 .centre{
     text-align: center;
     margin:70px auto;
     width:50%;
 }
 
+/*image de fond cadre phiphidon*/
 #don{
     background-image: url('../IMAGES/phi-don.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+/*image de fond cadre phiphileh*/
 #leh{
     background-image: url('../IMAGES/phi-leh.avif');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+/*disposition de 2 colones des cadres don et leh*/
 .iles{
     display:flex;
     justify-content: space-evenly;
 }
 
+/*titres don, leh*/
 .iles strong{
     font-size: 50px;
     font-family: fantasy;
     color:rgb(13, 137, 95);
 }
 
-#don p{
+#don p{  /*pour améliorer la visibilité*/
     background-color: #0b00006d;
 }
 
-#leh p:last-child{
+#leh p:last-child{      /*que le denrnier car le premier est assez visible*/
     background-color: #2b04043e;
 }
 
+/*texte cadre don, leh*/
 .iles div{
     width: 40%;
     line-height: 1.3em;
@@ -149,16 +352,18 @@ nav a:active{
     border-radius: 15px;
 }
 
+/*TABLEAU*/
 table{
     margin-top: 30px;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Fusion des bordures des cellules */
     width: 100%;
 }
 
 table td, th{
-    border: solid rgb(59, 59, 59) 1px;
+    border: solid rgb(59, 59, 59) 1px; /* Bordure grise autour des cellules */
 }
 
+/* Style des prix activité baht */
 .price1{
     background-color:rgb(28, 108, 81);
     border-radius: 15px;
@@ -167,6 +372,7 @@ table td, th{
     margin:20px auto;
 }
 
+/* Style des prix  activité euros */
 .price2{
     background-color:rgb(207, 238, 228);
     border-radius: 15px;
@@ -175,21 +381,23 @@ table td, th{
     margin:7px auto;
 }
 
+/*colonnes activités*/
 .activity{
     display: flex;
     justify-content:space-around;
     margin-bottom:5%;
 }
 
+/*contenu de chaque activité*/
 .activity ul{
     border-radius: 15px;
     border: 1px solid black;
-    box-shadow:2px 2px 2px rgba(0, 0, 0, 0.4);
+    box-shadow:2px 2px 2px rgba(0, 0, 0, 0.4);   /* Ombre autour */
     padding: 15px;
     line-height:1.6em;
     width: 20%;
     text-align: center;
-    float:left;
+    float:left;                                 
     list-style-type:none;
 }
 
@@ -199,21 +407,27 @@ table td, th{
     font-size:20px;
 }
 
+/*dimension images activités*/
 .activity img{
     width: 100%;
     margin-top:10px;
 }
 
-#info{
-    width:7%;
-    margin:7%;
-    float: left;
-}
 
+/* Cadre des Conseils à gauche */
 .tips{
     margin-left:4%;
     width:30%;
     float:left;
+}
+
+/* Cadre de La Plage film à droite */
+#film{
+    width: 55%;
+    float:right;
+    padding:3%;
+    border-radius: 15px;
+    border: 7px dashed #014747;
 }
 
 #film img{
@@ -223,14 +437,7 @@ table td, th{
     border-radius: 15px;
 }
 
-#film{
-    width: 55%;
-    float:right;
-    padding:3%;
-    border-radius: 15px;
-    border: 7px dashed #014747;
-}
-
+/*FOOTER*/
 footer {
     margin-top: 10px;
     background-color: rgb(6, 53, 37); /* Reprise de la barre de navigation */
@@ -239,17 +446,19 @@ footer {
     text-align: center;
 }
 
+/*titre footer au couleur de la page*/
 footer .titre{
     margin: 20px auto;
     color:aquamarine;
 }
 
+/*texte footer*/
 footer p {
     margin: 0;
 }
 
 footer a {
-    color: aquamarine; /* Lien accent plage */
+    color: aquamarine; /* Lien footer couleur de la page page */
     text-decoration: none;
 }
 
