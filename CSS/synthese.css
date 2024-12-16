@@ -495,4 +495,47 @@ body {
   .btn:hover {
     background-color: #004a5d;
   }
-  
+
+/* Section des avis */
+.reviews-section {
+  margin: 50px 0;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; /* Empêche le débordement */
+}
+
+/* Conteneur des avis */
+.reviews-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Les avis seront alignés horizontalement */
+  gap: 20px; /* Espacement entre les avis */
+  transition: transform 0.5s ease-in-out; /* Transition fluide */
+}
+
+/* Style de chaque avis */
+.review {
+  min-width: 100%; /* Chaque avis occupe toute la largeur */
+  text-align: left;
+}
+
+/* Auteur en gras grâce au CSS */
+.review-author {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #00627b;
+}
+
+/* Texte des avis */
+.review p {
+  font-size: 1rem;
+  color: #333;
+}

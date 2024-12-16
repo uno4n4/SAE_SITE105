@@ -79,3 +79,20 @@ document.addEventListener('click', (event) => {
     countryInfo.style.display = 'none'; // Cache la boîte d'information
   }
 });
+
+const reviewsContainer = document.querySelector('.reviews-container');
+const reviews = Array.from(document.querySelectorAll('.review'));
+
+let currentIndex = 0;
+
+function scrollReviews() {
+    currentIndex++;
+    if (currentIndex >= reviews.length) {
+        currentIndex = 0; // Revenir au premier avis
+    }
+    reviewsContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Défilement automatique toutes les 5 secondes
+setInterval(scrollReviews, 5000);
+
