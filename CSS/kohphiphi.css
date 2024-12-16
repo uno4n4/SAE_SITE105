@@ -113,7 +113,7 @@ header p{
 }
 
 /* icone pour la barre de navigation */
-  #toggle-nav {
+#toggle-nav {
     position: fixed;
     top: 20px;
     left: 20px;
@@ -181,7 +181,7 @@ nav a.active {
 
 /* Boutons WCAG de la barre de navigation*/
   /*probleme quand on appuie sur un bouton tous disparaissent*/
-  #nav-icons{
+#nav-icons{
     margin-top:2%;
 }
 
