@@ -55,6 +55,19 @@ body {
   background: none;
 }
 
+.montfuji-video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff, 0 0 30px #ffffff;
+}
+
+.montfuji-video:hover {
+  transform: none;
+  /* Pas de zoom au survol */
+}
+
+
 .nav-icons {
   flex: 1;
   text-align: center;
@@ -406,16 +419,4 @@ body.dark-mode img {
 .header-margin {
   margin-top: 40px;
   /* Vous pouvez ajuster cette valeur selon vos préférences */
-}
-
-.montfuji-video {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff, 0 0 30px #ffffff;
-}
-
-.montfuji-video:hover {
-  transform: none;
-  /* Pas de zoom au survol */
 }
