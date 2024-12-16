@@ -55,6 +55,19 @@ body {
   background: none;
 }
 
+.montfuji-video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff, 0 0 30px #ffffff;
+}
+
+.montfuji-video:hover {
+  transform: none;
+  /* Pas de zoom au survol */
+}
+
+
 .nav-icons {
   flex: 1;
   text-align: center;
@@ -196,7 +209,8 @@ button:hover::after {
   border: 2px solid black;
 }
 
-.tableau-arrondi th, .tableau-arrondi td {
+.tableau-arrondi th,
+.tableau-arrondi td {
   border: 2px solid black;
   padding: 10px;
   text-align: left;
@@ -356,7 +370,8 @@ body.dark-mode {
   background-image: none;
 }
 
-body.dark-mode h1, body.dark-mode h2 {
+body.dark-mode h1,
+body.dark-mode h2 {
   color: #ffffff;
   text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000;
 }
@@ -374,7 +389,8 @@ body.dark-mode .tableau-arrondi td {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-body.dark-mode .footer-text, body.dark-mode .footer-link {
+body.dark-mode .footer-text,
+body.dark-mode .footer-link {
   color: #ffffff;
 }
 
@@ -382,13 +398,15 @@ body.dark-mode .footer-link:hover {
   color: #ddd;
 }
 
-body.dark-mode .button-link, body.dark-mode button {
+body.dark-mode .button-link,
+body.dark-mode button {
   background-color: #333333;
   color: #ffffff;
   border: 2px solid #ffffff;
 }
 
-body.dark-mode .button-link:hover, body.dark-mode button:hover {
+body.dark-mode .button-link:hover,
+body.dark-mode button:hover {
   background-color: #444444;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
@@ -399,5 +417,6 @@ body.dark-mode img {
 
 /* Nouvelle classe pour la marge supérieure */
 .header-margin {
-    margin-top: 40px; /* Vous pouvez ajuster cette valeur selon vos préférences */
+  margin-top: 40px;
+  /* Vous pouvez ajuster cette valeur selon vos préférences */
 }
