@@ -516,6 +516,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  position: relative; /* Pour positionner correctement les avis */
   display: flex; /* Les avis seront alignés horizontalement */
   gap: 20px; /* Espacement entre les avis */
   transition: transform 0.5s ease-in-out; /* Transition fluide */
@@ -525,6 +526,7 @@ body {
 .review {
   min-width: 100%; /* Chaque avis occupe toute la largeur */
   text-align: left;
+  transition: opacity 0.5s ease; /* Transition de visibilité fluide */
 }
 
 /* Auteur en gras grâce au CSS */
@@ -535,7 +537,8 @@ body {
 }
 
 /* Texte des avis */
-.review p {
+.review p:last-child {
   font-size: 1rem;
   color: #333;
+  font-style: italic;
 }
