@@ -141,6 +141,8 @@ nav {
     align-items: center;
     justify-content: center;
     transition: right 0.3s ease; /* Effet d'animation fluide */
+    visibility: hidden;
+    opacity: 0;
 }
   
 nav ul {   /*position*/
@@ -167,6 +169,8 @@ nav ul li a:hover {
   
   /* Ajout d'une classe "open" js pour animer l'ouverture de la barre de navigation */
 nav.open {
+    visibility: visible;
+    opacity: 1;
     left: 0;
 }
 
@@ -250,6 +254,11 @@ button:active{
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
     transition: left 0.3s ease; /* Animation pour le défilement */
     z-index: 999;  
+}
+
+.dark-mode .nav.open{ /*menu ouvert en dark mode*/
+    visibility: visible;
+    opacity:1;
 }
 
 .dark-mode .separateur {
