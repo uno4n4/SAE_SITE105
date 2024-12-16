@@ -34,52 +34,6 @@ toggleNavButton.addEventListener("click", () => {
   sideNav.classList.toggle("open"); // Ajoute ou retire la classe 'open' pour afficher/masquer le menu
 });
 
-// Liste des marqueurs de pays et conteneurs d'information
-const markers = document.querySelectorAll('.marker');
-const countryInfo = document.getElementById('country-info');
-const countryImage = document.getElementById('country-image');
-const countryLink = document.getElementById('country-link');
-
-// Données des pays (images et liens)
-const countries = {
-  jordanie: {
-    image: './IMAGES/jordanie.png',
-    link: './HTML/jordanie.html',
-  },
-  japon: {
-    image: './IMAGES/japon.png',
-    link: './HTML/montfuji.html',
-  },
-  thailande: {
-    image: './IMAGES/thailande.png',
-    link: './HTML/kohphiphi.html',
-  },
-};
-
-// Gestionnaire d'événements pour les marqueurs de pays
-markers.forEach((marker) => {
-  marker.addEventListener('click', (event) => {
-    const country = marker.getAttribute('data-country'); // Récupère le pays à partir de l'attribut 'data-country'
-
-    // Met à jour l'image, le lien, et affiche les informations sur le pays
-    countryImage.src = countries[country].image;
-    countryLink.href = countries[country].link;
-    countryInfo.style.display = 'block'; // Rend visible la boîte d'information
-
-    // Positionne la boîte d'information près du marqueur
-    const markerRect = marker.getBoundingClientRect();
-    countryInfo.style.top = `${markerRect.top + window.scrollY + 20}px`;
-    countryInfo.style.left = `${markerRect.left + window.scrollX + 20}px`;
-  });
-});
-
-// Masque les informations sur le pays si l'utilisateur clique ailleurs
-document.addEventListener('click', (event) => {
-  if (!event.target.classList.contains('marker') && !countryInfo.contains(event.target)) {
-    countryInfo.style.display = 'none'; // Cache la boîte d'information
-  }
-});
-
 const reviewsContainer = document.querySelector('.reviews-container');
 const reviews = Array.from(document.querySelectorAll('.review'));
 
