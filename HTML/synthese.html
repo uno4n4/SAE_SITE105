@@ -3,39 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" href="../IMAGES/icone.ico"> <!-- Favicon de la page -->
-    <script src="https://kit.fontawesome.com/76ad15112d.js" crossorigin="anonymous"></script> <!-- Bibliothèque d'icônes Font Awesome -->
-    <link href="../CSS/style.css" rel="stylesheet">
-    <script src="../JS/index.js" defer></script> <!-- Le script est différé pour ne pas bloquer le chargement de la page -->
+    <link rel="icon" type="image/jpg" href="../IMAGES/icone.ico">
+    <script src="https://kit.fontawesome.com/76ad15112d.js" crossorigin="anonymous"></script>
+    <link href="../CSS/synthese.css" rel="stylesheet">
+    <script src="../JS/synthese.js" defer></script>
     <title>VoyAsia - Comparaison des Destinations</title>
 </head>
 <body>
-
     <!-- En-tête -->
     <header>
         <h1>Comparaison des Meilleures Destinations en 2024</h1>
         <nav class="side-nav">
             <figure class="logo">
-                <!-- Affichage de deux versions du logo (clair/sombre) selon le thème -->
-                 <a href="../index.html">
-                <img src="../IMAGES/voyasia_logo_noir_sans_fond.png" id="logo-clair" class="logo" alt="Logo Voyasia">
-                <img src="../IMAGES/voyasia_logo.webp" id="logo-sombre" class="logo" alt="Logo Voyasia sombre"></a>
+                <a href="../index.html">
+                    <img src="../IMAGES/voyasia_logo_noir_sans_fond.png" id="logo-clair" class="logo" alt="Logo Voyasia">
+                    <img src="../IMAGES/voyasia_logo.webp" id="logo-sombre" class="logo" alt="Logo Voyasia sombre">
+                </a>
             </figure>
             <ul>
-                <!-- Liens vers les pages des destinations -->
                 <li><a href="../HTML/jordanie.html">Jordanie</a></li>
                 <li><a href="../HTML/montfuji.html">Mont Fuji</a></li>
                 <li><a href="../HTML/kohphiphi.html">Thailande</a></li>
                 <li><a href="../HTML/savoirplus.html">En Savoir Plus</a></li>
             </ul>
             <div class="nav-icons">
-                <!-- Boutons d'interaction pour zoom et mode sombre -->
                 <button id="zoomIn">Zoom + </button>
                 <button id="zoomOut">Zoom -</button>
                 <button id="toggleDarkMode">Mode sombre</button>
             </div>
         </nav>
-        <button id="toggle-nav">☰</button> <!-- Bouton pour afficher/masquer le menu de navigation -->
+        <button id="toggle-nav">☰</button>
     </header>
 
     <!-- Contenu principal -->
@@ -87,6 +84,31 @@
             <h2>Conclusion</h2>
             <p>Après avoir comparé les trois destinations, il apparaît que <strong>Koh Phi Phi</strong> est la meilleure destination en 2024. Elle offre une combinaison unique de beauté naturelle, d'activités variées et de tarifs abordables. Que vous soyez amateur de plongée, de randonnée ou simplement à la recherche de détente sur des plages paradisiaques, Koh Phi Phi a tout pour plaire.</p>
         </section>
+
+        <!-- Section "En Savoir Plus" -->
+        <section>
+            <div class="form-container">
+                <form class="my-form">
+                    <h3>Contactez-nous</h3>
+                    <div class="form-group">
+                        <input type="text" id="first-name" placeholder="Prénom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="last-name" placeholder="Nom de famille" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Avez-vous un message ?</label>
+                        <textarea id="message" placeholder="Votre message...." rows="5"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <input class="btn" type="submit" name="submit" value="S'inscrire">
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 
     <!-- Pied de page -->
@@ -107,18 +129,15 @@
             <article class="footer-section">
                 <h4>Suivez-nous</h4>
                 <ul>
-                    <!-- Icônes des réseaux sociaux -->
                     <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </article>
         </div>
-
         <div class="footer-bottom">
             <p>&copy; 2024 découverte de l'Asie | Tous droits réservés.</p>
         </div>
     </footer>
-
 </body>
 </html>
